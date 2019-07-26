@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext,vietnamese');   
+body{font-family: 'Quicksand', sans-serif;}
+   	p{
+		font-size: 12px;
+		margin-top: 5px;
+	}
+	.price{
+		font-size: 1.4em;
+    	margin: 0 auto;
+    	color: #333;
+	}
+
+	.thumbnail{
+		opacity:0.70;
+		-webkit-transition: all 0.5s; 
+		transition: all 0.5s;
+	}
+	.thumbnail:hover{
+		opacity:1.00;
+        box-shadow: 0px 0px 10px #4fc4be;
+    }
+
+    .thumbnail img{
+        height: 20vh;
+    }
+    
+	.line{
+		margin-bottom: 5px;
+	}
+	@media screen and (max-width: 770px) {
+		.right{
+			float:left;
+			width: 100%;
+		}
+	}
+	span.thumbnail {
+    border: 1px solid #4fc4be !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+	padding: 10px;
+}
+.container h4{margin-top:70px; margin-bottom:30px;}
+button {    margin-top: 6px;
+}
+.right {
+    float: right;
+    border-bottom: 2px solid #4fc4be;
+}
+.btn-info {
+    color: #fff;
+    background-color: #4fc4be;
+    border-color: #4fc4be;
+	font-size:0.9em;
+	font-weight:600;
+}
+
