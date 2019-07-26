@@ -38,7 +38,7 @@ body {
     height: 6vh;
     size: 30%;
     font-size: 1.1em;
-    border-color: #4fc4be;
+    border-color: rgba(70, 166, 94);
     border-radius: 5%;
     text-align: center;
 }
@@ -125,7 +125,7 @@ body {
 }
     /*Menu Responsivo Início*/
 #toggle{
-    display: visible;
+    display: none;
 }
 
 #menuResponsivo{
@@ -325,116 +325,11 @@ body {
 .espacoProduto{
     margin-bottom: 50px;
 }
-/* form contato begin */
-
-.contato-content {
-    margin: 8%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    border: 4px solid #4fc4be;
-    border-radius: 10px;
-    background-color: white;
-}
-
-.contato-content .contato-titulo {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contato-content form {
-    width: 100%;
-     padding: 10%;
-
-}
-.botao{
-    margin-top: 2px;
-}
-
-h1#contatonome{
-    margin-top: 90px;
-}
-.romd{
-    margin: -7%;
-    margin-top: -3%;
-}
-
-.romd1{
-    max-width: 480px;
-}
-
-.mkrt{
-    margin-top: 2%;
-}
-
-/* form contato end */
-
-/* form cadastro begin */
-
-.cadastro-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2%;
-    margin: 30px auto;
-    border: 4px solid #4fc4be;
-    border-radius: 10px;
-    background-color: white;
-    
-}
-
-/* form cadastro end */
 
 
-/* pagina sobre begin */
 
-.sobre-conteudo.sobre-imagem {
-    height: 40%;
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    background-image: url(../img/3rs-590x245.jpg);
-    background-size: cover;
-  }
-  
-  .sobre-conteudo .sobre-controle {
-    background-color: #fff;
-    padding: 3%;
-    display: flex;
-    justify-content: center;
-    background-image: url()
-  }
-  
-  .sobre-conteudo .sobre-controle video {
-    width: 80%;
-    height: 60vh;
-    object-fit: cover;
-  }
- 
-  
-  .sobre-conteudo .sobre-controle article {
-    width: 60%;
-    display: flex;
-    padding: 3%;
-    justify-content: space-around;
-  }
-  
-  .sobre-conteudo .sobre-controle p {
-    margin-top: 1%;
-    text-align: justify;
-  }
- .textovideo{
-     font-size: 16px;
- }
 
-/* pagina sobre end */
+
 
 /* produto  begin*/
 
@@ -458,9 +353,13 @@ h1#contatonome{
 /* card imagens end */
 
 /* imagem logo */
-#imagemlogo {
-    width: 40%;
-    height: 40%;
+.imagemlogo {
+    width: 80%;
+    height: 20%;
+}
+#imgLogoMeSustenta{
+    width: 80%;
+    height: 20%;
 }
 
 
@@ -625,6 +524,7 @@ footer{
     width: 100%;
     left: 0%;
     background-color: rgba(70, 166, 94,0.7);
+    
   
 }
 

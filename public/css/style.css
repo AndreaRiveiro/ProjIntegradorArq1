@@ -38,7 +38,11 @@ body {
     height: 6vh;
     size: 30%;
     font-size: 1.1em;
+<<<<<<< HEAD
     border-color: #4fc4be;
+=======
+    border-color: rgba(70, 166, 94);
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
     border-radius: 5%;
     text-align: center;
 }
@@ -125,7 +129,11 @@ body {
 }
     /*Menu Responsivo Início*/
 #toggle{
+<<<<<<< HEAD
     display: visible;
+=======
+    display: none;
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 }
 
 #menuResponsivo{
@@ -325,6 +333,7 @@ body {
 .espacoProduto{
     margin-bottom: 50px;
 }
+<<<<<<< HEAD
 /* form contato begin */
 
 .contato-content {
@@ -435,6 +444,13 @@ h1#contatonome{
  }
 
 /* pagina sobre end */
+=======
+
+
+
+
+
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 
 /* produto  begin*/
 
@@ -458,9 +474,19 @@ h1#contatonome{
 /* card imagens end */
 
 /* imagem logo */
+<<<<<<< HEAD
 #imagemlogo {
     width: 40%;
     height: 40%;
+=======
+.imagemlogo {
+    width: 80%;
+    height: 20%;
+}
+#imgLogoMeSustenta{
+    width: 80%;
+    height: 20%;
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 }
 
 
@@ -625,6 +651,10 @@ footer{
     width: 100%;
     left: 0%;
     background-color: rgba(70, 166, 94,0.7);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
   
 }
 

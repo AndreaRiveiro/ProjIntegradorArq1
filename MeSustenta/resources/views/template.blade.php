@@ -30,7 +30,7 @@
                     </form>
                 </div>
                 <div id="containerMeio" class="col-3 d-flex justify-content-center align-items-center">
-                    <a href="/principal"><img src="" alt="Logo MeSustenta"></a>
+                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta" id="imgLogoMeSustenta"></a>
                 </div>
                 <div class="row d-flex justify-content-around col-4">
                     @guest
@@ -202,7 +202,7 @@
                     <label> Copyright © 2019 | MeSustenta </label>
                 </div>
                 <div>
-                    <img src="img/logofim.png" alt="Logo" id="imagemlogo">
+                    <img src="img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
                 </div>
             </div>
         </section>

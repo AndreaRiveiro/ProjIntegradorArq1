@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0%;
     padding: 0%;
@@ -143,6 +144,10 @@ body {
 
   /* form contato begin */
 
+=======
+  /* form contato begin */
+/* 
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 .contato-content {
     margin: 8%;
     width: 40%;
@@ -186,7 +191,11 @@ h1#contatonome{
 
 .mkrt{
     margin-top: 2%;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 
 /* form contato end */
 
@@ -196,6 +205,7 @@ h1#contatonome{
     height: 40%;
 }
 
+<<<<<<< HEAD
 /* footer begin */
 footer{
     position: absolute;
@@ -222,3 +232,8 @@ footer{
 
 } */
 /* footer end */
+=======
+
+
+
+>>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
