@@ -1,0 +1,1 @@
+<h1>Oi <?php echo e(Auth::user()->name); ?></h1><?php /**PATH C:\Users\tomeshi\Documents\Andrea\PFS2\ProjetoIntegrador\Camila\ProjIntegradorArq1\ProjIntegradorArq1\MeSustenta\resources\views/teste.blade.php ENDPATH**/ ?>

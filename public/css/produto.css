@@ -1,0 +1,363 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 15px;
+    min-height: 100vh;
+    /* position: relative; */
+    overflow-x: hidden;
+  
+}
+
+#containerNav {
+    background:white;
+    padding: 0%;
+    width: 100%;
+}
+
+#navTopo {
+    margin: 1% 4% 0% 4%;
+    width: 100vw;
+    height: 16vh;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#containerSearch form input {
+    height: 4vh;
+    font-size: 1em;
+    border-color: #4fc4be;
+    border-radius: 5%;
+    text-align: center;
+}
+
+#containerSearch form input::-moz-placeholder {
+    height: 6vh;
+    size: 30%;
+    font-size: 1.1em;
+    border-color: #4fc4be;
+    border-radius: 5%;
+    text-align: center;
+}
+
+/* alterando caracteristicas do placeholder - inicio */
+#containerSearch form ::placeholder {
+    font-family: 'Lucida Grande';
+    font-size: 1.1em;
+    font-style: oblique;
+    color: #4370d7;
+}
+
+#containerSearch form input::placeholder {
+    font-family: 'Lucida Grande';
+    font-size: 1.1em;
+    font-style: oblique;
+    color: #4370d7;
+}
+
+#containerSearch form textarea::placeholder {
+    font-family: 'Lucida Grande';
+    font-size: 1.1em;
+    font-style: oblique;
+    color: #4370d7;
+}
+
+/* alterando caracteristicas do placeholder - fim */
+#containerSearch form button {
+    border: none;
+    background: none;
+}
+
+#containerSearch form button i {
+    font-size: 1.5em;
+    color: #4fc4be;
+}
+
+#buttonLogin{
+    font-size: 0.8em;
+    margin: 1% 0% 0% 0%;
+    color: #4fc4be;
+}
+
+#divRightLineTwo{
+    z-index: 10;
+}
+
+#navBase {
+    background: rgba(70, 166, 94,0.7);
+}
+
+#menuBase {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#toggle{
+    display: none;
+}
+
+.subMenu {
+    border: none;
+}
+
+.tituloMenu {
+    color: black;
+    border: none;
+}
+
+.subTitulo {
+    font-size: 0.9em;
+    font-style: bold;
+    color: #2655c2;
+}
+
+#listaLojas {
+    list-style: none;
+}
+
+#listaDepartamentos {
+    list-style: none;
+}
+
+#listaMenu {
+    list-style: none;
+}
+
+
+#banner img {
+    max-width: 15vw;
+    max-height: 14vh;
+}
+
+.content-alt{
+    display: flex;
+    justify-content: center;
+
+}
+  /* HOME end */
+
+/* Page Departamentos Início*/
+
+.titulo{
+    margin: 1.5% 0% 1.5% 0%;
+    font-size: 2em;
+
+}
+
+/* Carrossel Início*/
+
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+    /* Carrossel End */
+        /* Page Departamentos END */
+
+        /* produto  begin*/
+
+.quadro{
+    margin-top: 30px;
+}
+
+/* produto end */
+
+/* card imagens begin*/
+
+    /* .imgcard{
+        margin-right: 18px;
+    } */
+.card-img-top{
+    align-self: center;
+}
+/* card imagens end */
+
+
+/* imagem logo */
+#imagemlogo {
+    width: 40%;
+    height: 40%;
+}
+
+
+/* imagem */
+
+.img1{
+    margin: 17px;
+    
+}
+.img2{
+    margin: 15px;
+}
+.img3{
+    padding: 30px;
+}
+
+/* info */
+
+.name-info{
+    margin: 0px;
+   
+}
+.quant{
+    margin: 10px;
+    font-size: 15px;
+}
+.btnn{
+    margin: 15px;
+    color: white;
+    border-color: transparent;
+    background-color: #17a2b8;
+    
+    
+}
+.card-text{
+    text-align: center;
+}
+
+.prod h4{
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+.arm{
+    margin-top:20px; 
+}
+
+.btn12{
+    margin-top: 10px;
+    
+}
+
+.zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+ 
+ .zoem:hover{
+     transform: scale(1.4);
+ } 
+
+
+
+
+
+
+
+
+/* Imagem  produtos modal  */
+
+.modal {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+/* imagem modal end */
+
+/* img produtos */
+
+.rodape .card{
+   border: none;
+   max-width: 250px;
+}
+.caro img{
+    max-width: 100px;
+}
+.princi img{
+    max-width: 300px;
+}
+
+/* img produtos end */
+
+/* footer begin */
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0%;
+}
+
+
+
+
+#listaRedeSocial {
+    list-style: none;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+/* .fot{
+    display: flex;
+}
+.contato{
+    width: 10%;
+
+} */
+/* footer end */
