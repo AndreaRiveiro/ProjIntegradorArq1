@@ -15,8 +15,13 @@
         <div class="form-group" >
 
             <div>
-                <label>Nome</label>
-                <input type="text" class="form-control casds" name="name" placeholder="Nome">
+            <label for='name'>{{ __('Name') }}</label>
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nome" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror  
             </div>
             <div>
                 <label>Sobrenome</label>

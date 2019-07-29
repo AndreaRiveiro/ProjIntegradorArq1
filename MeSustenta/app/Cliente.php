@@ -15,11 +15,10 @@ class Cliente extends Authenticatable
      *
      * @var array
      */
+    protected $table= 'clientes';
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', "lastName", 'data_nasc', 'email', 'password', 'endereco', 'num_end', 'bairro', 'uf', 'cidade', 'cep', 'rg', 'cpf',
     ];
-
-   
 
     /**
      * The attributes that should be hidden for arrays.
