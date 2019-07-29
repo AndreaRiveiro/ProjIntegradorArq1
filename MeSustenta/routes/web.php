@@ -56,10 +56,8 @@ Route::post('/produto/editar/{id}',"ProdutoController@editar");
 
 
 // Routes Pedido + Carrinho 
-Route::middleware(['auth'])->group(function() {
     Route::get('/carrinho','CarrinhoController@index');
     Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
-});
 
 Route::post('/carrinho/exibir', 'CarrinhoController@exibir');
 
