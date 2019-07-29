@@ -13,29 +13,32 @@
         <div class="form-group" >
 
             <div>
-                <label>Nome</label>
-                <input type="text" class="form-control casds" name="name" placeholder="Nome">
+            <label for='name'><?php echo e(__('Name')); ?></label>
+                <input id="name" type="text" class="form-control <?php if ($errors->has('name')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('name'); ?> is-invalid <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif; ?>" name="name" placeholder="Nome" value="<?php echo e(old('name')); ?>" required autocomplete="name" autofocus>
+                <?php if ($errors->has('name')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('name'); ?>
+                    <span class="invalid-feedback" role="alert">
+                        <strong><?php echo e($message); ?></strong>
+                    </span>
+                <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif; ?>  
             </div>
             <div>
                 <label>Sobrenome</label>
                 <input type="text" class="form-control casds" name="lastName" placeholder="Sobrenome">
-            </div>
-            <div>
-                <label>Data de Nascimento</label>
-                <input type="date" class="form-control casds" name='data_nasc' placeholder="Data de Nascimento">
-            </div>
-            <div>
-                <label>RG</label>
-                <input type="text" class="form-control casds" name='rg' placeholder="RG">
-            </div>
-            <div>
-                <label>CPF</label>
-                <input type="text" class="form-control casds" name='cpf' placeholder="CPF">
-            </div>
+            </div>         
 
         </div>
+    </form>    
 
 
+    <form method="POST"action="/cadastro">
         <!-- Informações Endereço -->
         <div class="form-group">
 
@@ -71,6 +74,9 @@
 
         </div>
 
+    </form>    
+
+    <form method="POST"  action="/cadastro">
         <!-- Informações de Login -->
 
         <div class="form-group" >
@@ -79,6 +85,15 @@
                 <label for="exampleFormControlInput1">Email</label>
                 <input type="email" class="form-control casds" id="exampleFormControlInput1" name="email"
                     placeholder="nome@email.com">
+                    <?php if ($errors->has('email')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('email'); ?>
+                        <span class="invalid-feedback" role="alert">
+                            <strong><?php echo e($message); ?></strong>
+                        </span>
+                    <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif; ?>
             </div>
 
             <div>

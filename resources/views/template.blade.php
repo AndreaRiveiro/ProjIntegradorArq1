@@ -21,25 +21,25 @@
     <header>
         <section id="containerNav" class="nav d-flex col-lg-12 col-md-12 col-sm-12">
             <nav id="navTopo" class="row">
-                <div id="containerSearch" class="justify-content-around col-4">
+                <div class="col-3">
+                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
+                </div>
+                <div id="containerSearch" class="container-fluid justify-content-around col-5">
                     <form action="" method="GET">
                         <input type="search" name="buscah" size="24" placeholder="  O que você está procurando">
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                </div>
-                <div id="containerMeio" class="col-3 d-flex justify-content-center align-items-center">
-                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta" id="imgLogoMeSustenta"></a>
-                </div>
-                <div class="row d-flex justify-content-around col-4">
+                </div>                
+                <div class="row d-flex justify-content-center col-3">
                     @guest
-                        <div id="divRightLineTwo" class="col-5">           
+                        <div id="divRightLineTwo" class="col-3">           
                                 @include('auth.login') 
                         </div>
                         <div id="cadastrar" class="d-flex align-items-center col-4">     
-                            <a id="addLogin" href="/cadastro" style="font-size:0.8em;color:#4fc4be">
-                                <i class="fa fa-thumbs-up" style="font-size:1.3em;color:#4fc4be"></i>
+                            <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
+                                <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
                                 Cadastre-se
                             </a>
                         </div>
@@ -56,21 +56,21 @@
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">                             
                                     <a href="/editarCadastro/{{auth()->user()->id}}">
-                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#4fc4be">
-                                            <i class="fa fa-pencil-square-o" style="font-size:1.6em;color:#4fc4be"></i>Editar Cadastro
+                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
+                                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
                                         </button>
                                     </a>
                                 </p>
-                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#4fc4be">
-                                    <i class="fa fa-user-times" style="font-size:1.3em;color:#4fc4be"></i>Logout!</button>
+                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
+                                    <i class="fa fa-user-times" style="font-size:1.2em;color:#000505"></i>Logout!</button>
                                 </a>
                             </div>
                         </div>   
                     </div>          
                     @endauth
 
-                    <div>
-                        <a href="/carrinho/exibir"><img src="img/iconeCarP.png" alt=""></a>
+                    <div class="d-flex align-items-center">
+                        <a href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
                     </div>
                 </div>
             </nav>
@@ -102,7 +102,7 @@
                     </ul>
                 </div>
                     <!-- Menu Hamburguer Fim-->
-                <div id="menuBase">
+                <div id="menuBase" class="container-fluid">
                     <!--  Comeco menu de Produtor-->
                     <li>Home</li>
                     <li id="listaLojas" class="navbar-item dropdown">
