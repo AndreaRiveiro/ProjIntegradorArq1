@@ -73,25 +73,46 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Cliente
      */
-    public function create(Request $data)
+    protected function create(array $data)
     {
-        $novoCliente = new Cliente();
-        $novoCliente->prim_nome = $data->name;
-        $novoCliente->ult_nome = $data->lastName;
-        $novoCliente->data_nasc = $data->data_nasc;
-        $novoCliente->rg = $data->rg;
-        $novoCliente->cpf = $data->cpf;
-        $novoCliente->endereco = $data->endereco;
-        $novoCliente->num_end = $data->num_end;
-        $novoCliente->bairro = $data->bairro;
-        $novoCliente->uf = $data->uf;
-        $novoCliente->cidade = $data->cidade;
-        $novoCliente->cep = $data->cep;
-        $novoCliente->email = $data->email;
-        $novoCliente->password = hash::make($data->password);
-        $novoCliente->cliente_status = 1;
-        $novoCliente->save();
-
-        return redirect('/principal');
+        return Cliente::create([
+            'prim_nome' => $data['name'],
+            'ult_nome'=>$data['lastName'],
+            'data_nasc' => $data['data_nasc'],
+            'rg' => $data['rg'],
+            'cpf' => $data['cpf'],
+            'endereco' => $data['endereco'],
+            'num_end' => $data['num_end'],
+            'bairro' => $data['bairro'],
+            'uf' => $data['uf'],
+            'cidade' => $data['cidade'],
+            'cep' => $data['cep'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'cliente_status' => '1',
+        ]);
     }
+
+
+    // public function create(Request $data)
+    // {
+    //     $novoCliente = new Cliente();
+    //     $novoCliente->prim_nome = $data->name;
+    //     $novoCliente->ult_nome = $data->lastName;
+    //     $novoCliente->data_nasc = $data->data_nasc;
+    //     $novoCliente->rg = $data->rg;
+    //     $novoCliente->cpf = $data->cpf;
+    //     $novoCliente->endereco = $data->endereco;
+    //     $novoCliente->num_end = $data->num_end;
+    //     $novoCliente->bairro = $data->bairro;
+    //     $novoCliente->uf = $data->uf;
+    //     $novoCliente->cidade = $data->cidade;
+    //     $novoCliente->cep = $data->cep;
+    //     $novoCliente->email = $data->email;
+    //     $novoCliente->password = hash::make($data->password);
+    //     $novoCliente->cliente_status = 1;
+    //     $novoCliente->save();
+
+    //     return redirect('/principal');
+    // }
 }
