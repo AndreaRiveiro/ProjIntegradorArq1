@@ -34,8 +34,13 @@ body {
 #imgLogoMeSustenta{
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-flow: row;
+}
+
+#containerSearch form{
+    display: flex;
+    justify-content: center;
 }
 
 #containerSearch form input {
@@ -43,6 +48,7 @@ body {
     font-size: 1em;
     border-color: #000505;
     border-radius: 5%;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -88,14 +94,18 @@ body {
     color: #000505;
 }
 
-#buttonLogin{
-    font-size: 0.8em;
-    margin: 1% 0% 0% 0%;
-    color: #000505;
-}
-
 #divRightLineTwo{
     z-index: 10;
+}
+
+#cadastrar{
+    padding: 0;
+    justify-content: center;
+}
+
+.fafaCar{
+    color: black;
+    font-size: 1.2em;
 }
 
 #navBase {
