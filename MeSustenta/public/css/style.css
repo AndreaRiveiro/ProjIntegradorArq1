@@ -12,18 +12,30 @@ body {
   
 }
 /* Início Header*/
-#containerNav {
-    background: white;
-    padding: 0%;
-    width: 100%;
+
+#containerNav{
+    padding: 0;
 }
 
 #navTopo {
     margin: 1% 4% 0% 4%;
     width: 100vw;
-    height: 16vh;
     justify-content: space-between;
     align-items: flex-start;
+    flex-flow: row wrap;
+
+}
+
+#navTopo a{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#imgLogoMeSustenta{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row;
 }
 
 #containerSearch form input {
@@ -125,11 +137,11 @@ body {
 }
     /*Menu Responsivo Início*/
 #toggle{
-    display: visible;
+    display: none;
 }
 
 #menuResponsivo{
-    display: visible;
+    display: none;
 } 
 
 /* Criando o Hamburguer - Início*/
