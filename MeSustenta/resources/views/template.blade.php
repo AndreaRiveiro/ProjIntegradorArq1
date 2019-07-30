@@ -122,7 +122,7 @@
                             <a class="dropdown-item subTitulo" href="pageDepartamentos.html">Alimentos</a>
                             <a class="dropdown-item subTitulo" href="#">Beleza</a>
                             <a class="dropdown-item subTitulo" href="#">Casa</a>
-                            <a class="dropdown-item subTitulo" href="#">Moda</a>
+                            
                         </div>
                     </li>
                     <!--   Final menu de Departamentos -->
@@ -139,30 +139,40 @@
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/o-que-sustenta-a-sustentabilidade-baixa-1000x500.jpg" class="d-block w-100" alt="...">
+                    <img src="img/banner2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Reutilizar</h3>
-                        <p>A ação de reutilizar um produto é poder dar uma nova utilidade para algo que, normalmente,
-                            seria jogado fora</p>
+                        <h3></h3>
+                        <p></p>
+                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
+                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
+                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/bandeira">Bandeira vetor criado por vectorpouch - br.freepik.com</a> -->
+                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/papel">Papel foto criado por freepik - br.freepik.com</a> -->
+                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/29.png" class="d-block w-100" alt="...">
+                    <img src="img/banner3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Reciclar</h3>
-                        <p>Promover uma reciclagem é a transformação de um produto que não pode ser mais utilizado em um
-                            novo produto ou matéria-prima.</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/30.png" class="d-block w-100" alt="...">
+                    <img src="img/positiva.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Reduzir</h3>
-                        <p>O ato de diminuir o lixo e também a emissão de poluentes através de um consumo mais
-                            consciente, poupando também os recursos naturais.</p>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sustenta.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -181,14 +191,55 @@
 
     </main>
  <!--FOOTER InÍCIO-->
- <footer>
-        <section class="fot">
+ <footer class="page-footer font-small blue pt-4">
+
+<section>
+<div class="container-fluid text-center text-md-left">
+  <div class="row">
+    <div class="col-md-6 mt-md-0 mt-3">
+      <h5 class="text">MeSustenta</h5>
+      <p>Por uma vida mais sustentavél e natural.</p>
+    </div>
+    <hr class="clearfix w-100 d-md-none pb-3">
+    <div class="col-md-3 mb-md-0 mb-3">
+      <h5 class="text-uppercase">Links</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="#!">Nosso Objetivo</a>
+        </li>
+        <li>
+          <a href="/sobre">Quem somos</a>
+        </li>
+        <li>
+          <a href="/contato">Contato</a>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="col-md-3 mb-md-0 mb-3">
+      <h5 class="text-uppercase">Links</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="#!">Termos de Uso</a>
+        </li>
+        <li>
+          <a href="#!">Home</a>
+        </li>
+        <li>
+          <a href="#!">Categorias</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="fot">
             <div class="ftr">
                 <div class="contato">
                     <nav id="navCenter" class="container-fluid">
                         <div id="containerMeio" class="container-fluid">
                             <ul id="listaRedeSocial" class="row">
-                                <label>Contato</label>
                                 <li><a id="iconWhats" href="#" class="fa fa-whatsapp"></a></li>
                                 <li><a id="iconFace" href="#" class="fa fa-facebook"></a></li>
                                 <li><a id="iconTwitter" href="#" class="fa fa-twitter"></a></li>
@@ -204,7 +255,10 @@
                 </div>
             </div>
         </section>
-    </footer>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
     <script src="{{asset('js/script.js')}}"></script>
 
     <!-- <script src="{{asset('js/script.js')}}"></script> -->
