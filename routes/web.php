@@ -33,6 +33,7 @@ Route::get('/home',"PrincipalController@index");
 Route::get('/cadastro','CadastroController@index');
 Route::post('/cadastro', 'Auth\RegisterController@create');
 Route::get('/contato','ContatoController@index');
+
 Route::get('/sobre', 'SobreController@index');
 Route::get('/alimentos', 'AlimentosController@index');
 Route::get('/departamentos','DepartamentoController@index');
