@@ -18,35 +18,33 @@
             <input type="hidden" class="idCarrinho" nome="idCarrinho">
             <input type="hidden" class="itens" nome="carrinho_itens">
             <input type="hidden" class="codCliente" nome="codigoCliente">
-            
+
             <th>Total</th>
         </tr>
         </thead>
         <tbody>
         @foreach($produtos as $produto)
             <tr>
-              <td>{{ $produto->idProduto }}</td>           
+
+              <td>{{ $produto->idProduto }}</td>
               <td>{{ $produto->nome_produto}}</td>
-              <td>{{ $produto->quantidade_em_estoque}}
-              <td>
-                
-              </td>
+              <td>{{ $produto->quantidade_em_estoque}}</td>
+              <td></td>
             </tr>
           @endforeach
         </tbody>
-        </table>    
-               
+        </table>
+
         <div>
-         
+
         </div>
-         
- 
+
+
 </form>
 
 @endsection
 
 
-  
-     
-        
-  
+
+
+

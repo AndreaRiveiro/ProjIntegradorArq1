@@ -68,7 +68,7 @@ Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 
 // Route Categoria
 
-// Route::get('/categoria','CategoriaController@mostrarcategorias');
+Route::get('/categoria/{id}','CategoriaController@mostrarProdutos');
 
 
 /* Logout */
