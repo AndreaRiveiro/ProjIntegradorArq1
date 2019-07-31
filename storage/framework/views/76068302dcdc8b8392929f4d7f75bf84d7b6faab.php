@@ -1,4 +1,4 @@
-<button onclick="document.getElementById('id01').style.display='block'" class="btn-default" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" class=" btn btn-defult" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
     <div class="card-header" hidden><?php echo e(__('Login')); ?></div>
     <div id="id01" class="modal">
         <form class="modal-content animate" method="POST" action="<?php echo e(route('login')); ?>">
@@ -14,7 +14,7 @@ if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('email'); ?> is-invalid <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>" value="<?php echo e(old('email')); ?>" placeholder="Digite seu E-mail" name="email" required autocomplete="email" autofocus>
-          <i class="fa fa-eye-slash" style="font-size: 1em"></i>
+          <i class="fa fa-eye-slash" style="font-size: 1.6em"></i>
                  <?php if ($errors->has('email')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('email'); ?>
@@ -51,7 +51,7 @@ endif; ?>
         </div>
         <!--Footer modal Login Início -->
         <div class="containerFooter">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn-default cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn-outinfo-line cancelbtn">Cancel</button>
           <div class="width-100%"></div>
           <button type="submit"  onclick="myFuncCadastro()" class="bntCadastro ">Cadastre-se</button>
             <?php if(Route::has('password.request')): ?>

@@ -146,9 +146,6 @@ body {
     list-style: none;
 }
     /*Menu Responsivo Início*/
-#toggle{
-    display: none;
-}
 
 #menuResponsivo{
     display: none;

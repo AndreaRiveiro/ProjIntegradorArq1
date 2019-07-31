@@ -33,10 +33,9 @@ Route::get('/home',"PrincipalController@index");
 Route::get('/cadastro','CadastroController@index');
 Route::post('/cadastro', 'Auth\RegisterController@create');
 Route::get('/contato','ContatoController@index');
-
 Route::get('/sobre', 'SobreController@index');
 Route::get('/alimentos', 'AlimentosController@index');
-Route::get('/departamentos','DepartamentoController@index');
+Route::get('/categoria','CategoriaController@index');
 Route::get('/carrinho', 'PedidoController@index');
 Route::get('/pedido','PedidoController@index');
 Route::get('/password','passwordController@index');
@@ -57,9 +56,8 @@ Route::post('/produto/editar/{id}',"ProdutoController@editar");
 
 
 // Routes Pedido + Carrinho 
-Route::get('/carrinho','CarrinhoController@index');
-Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
-
+    Route::get('/carrinho','CarrinhoController@index');
+    Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
 
 Route::post('/carrinho/exibir', 'CarrinhoController@exibir');
 
@@ -68,6 +66,9 @@ Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 
 // Route::deletar('/carrinho/remover','PedidoController@remover');
 
+// Route Categoria
+
+// Route::get('/categoria','CategoriaController@mostrarcategorias');
 
 
 /* Logout */                   
