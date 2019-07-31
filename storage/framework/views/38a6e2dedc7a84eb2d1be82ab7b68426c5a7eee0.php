@@ -21,25 +21,25 @@
     <header>
         <section id="containerNav" class="nav d-flex col-lg-12 col-md-12 col-sm-12">
             <nav id="navTopo" class="row">
-                <div class="col-3">
-                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
-                </div>
-                <div id="containerSearch" class="container-fluid justify-content-around col-5">
+                <div id="containerSearch" class="justify-content-around col-4">
                     <form action="" method="GET">
                         <input type="search" name="buscah" size="24" placeholder="  O que você está procurando">
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                </div>                
-                <div class="row d-flex justify-content-center col-3">
+                </div>
+                <div id="containerMeio" class="col-3 d-flex justify-content-center align-items-center">
+                    <a href="/principal"><img src="" alt="Logo MeSustenta"></a>
+                </div>
+                <div class="row d-flex justify-content-around col-4">
                     <?php if(auth()->guard()->guest()): ?>
-                        <div id="divRightLineTwo" class="col-3">           
+                        <div id="divRightLineTwo" class="col-5">           
                                 <?php echo $__env->make('auth.login', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> 
                         </div>
                         <div id="cadastrar" class="d-flex align-items-center col-4">     
-                            <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
-                                <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
+                            <a id="addLogin" href="/cadastro" style="font-size:0.8em;color:#000505">
+                                <i class="fa fa-thumbs-up" style="font-size:1.1em;color:#000505"></i>
                                 Cadastre-se
                             </a>
                         </div>
@@ -57,21 +57,21 @@
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">                             
                                     <a href="/editarCadastro/<?php echo e(auth()->user()->id); ?>">
-                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
+                                        <button id="btnEditarCd" type="button" class="btn btn-outline-default col-12" style="font-size:0.8em;color:#000505">
+                                            <i class="fa fa-pencil-square-o" style="font-size:1em;color:#000505"></i>Editar Cadastro
                                         </button>
                                     </a>
                                 </p>
-                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                    <i class="fa fa-user-times" style="font-size:1.2em;color:#000505"></i>Logout!</button>
+                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-default col-12" style="font-size:0.8em;color:#000505">
+                                    <i class="fa fa-user-times" style="font-size:1em;color:#000505"></i>Logout!</button>
                                 </a>
                             </div>
                         </div>   
                     </div>          
                     <?php endif; ?>
 
-                    <div class="d-flex align-items-center">
-                        <a href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
+                    <div>
+                        <a href="/carrinho/exibir"><img src="img/iconeCarP.png" alt=""></a>
                     </div>
                 </div>
             </nav>
@@ -103,7 +103,7 @@
                     </ul>
                 </div>
                     <!-- Menu Hamburguer Fim-->
-                <div id="menuBase" class="container-fluid">
+                <div id="menuBase">
                     <!--  Comeco menu de Produtor-->
                     <li>Home</li>
                     <li id="listaLojas" class="navbar-item dropdown">
@@ -203,7 +203,7 @@
                     <label> Copyright © 2019 | MeSustenta </label>
                 </div>
                 <div>
-                    <img src="img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
+                    <img src="img/logofim.png" alt="Logo" id="imagemlogo">
                 </div>
             </div>
         </section>
