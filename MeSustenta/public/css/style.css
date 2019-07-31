@@ -350,50 +350,13 @@ body {
 }
 /* form contato begin */
 
-.contato-content {
-    margin: 8%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    border: 4px solid #4fc4be;
-    border-radius: 10px;
-    background-color: white;
+#forms{
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
-.contato-content .contato-titulo {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.contato-content form {
-    width: 100%;
-     padding: 10%;
 
-}
-.botao{
-    margin-top: 2px;
-}
-
-h1#contatonome{
-    margin-top: 90px;
-}
-.romd{
-    margin: -7%;
-    margin-top: -3%;
-}
-
-.romd1{
-    max-width: 480px;
-}
-
-.mkrt{
-    margin-top: 2%;
-}
 
 /* form contato end */
 

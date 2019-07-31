@@ -33,6 +33,7 @@ Route::get('/home',"PrincipalController@index");
 Route::get('/cadastro','CadastroController@index');
 Route::post('/cadastro', 'Auth\RegisterController@create');
 Route::get('/contato','ContatoController@index');
+
 Route::get('/sobre', 'SobreController@index');
 Route::get('/alimentos', 'AlimentosController@index');
 Route::get('/departamentos','DepartamentoController@index');
@@ -56,10 +57,9 @@ Route::post('/produto/editar/{id}',"ProdutoController@editar");
 
 
 // Routes Pedido + Carrinho 
-Route::middleware(['auth'])->group(function() {
-    Route::get('/carrinho','CarrinhoController@index');
-    Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
-});
+Route::get('/carrinho','CarrinhoController@index');
+Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
+
 
 Route::post('/carrinho/exibir', 'CarrinhoController@exibir');
 

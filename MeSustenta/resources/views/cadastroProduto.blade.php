@@ -21,11 +21,9 @@
             <div>
                 <label>Código do Produto</label>
                 <input type="number" class="form-control casds" name="codigoProduto">
-                <label>Código Categoria</label>
-                <input type="number" class="form-control casds" name="codigoCategoria">
-            </div>
-            
-            
+                <label>Categoria</label>
+                <input type="text" class="form-control casds" name="codigoCategoria">
+            </div>   
             <div>
                 <label>Quantidade em Estoque</label>
                 <input type="number" class="form-control casds" name="quantidadeEstoque">
@@ -37,10 +35,8 @@
                 <input type="text" class="form-control casds" name="descricao">
             </div>
             <div>
-                <label>Departamento</label>
-                <input type="text" class="form-control casds" name="departamento">
-                <label>Código do Fornecedor</label>
-                <input type="number" class="form-control casds" name="codigoFornecedor">
+                <label>Nome do Fornecedor</label>
+                <input type="text" class="form-control casds" name="codigoFornecedor">
                 <label>Nome da Loja</label>
                 <input type="text" class="form-control casds" name="nomeloja">
             </div>
