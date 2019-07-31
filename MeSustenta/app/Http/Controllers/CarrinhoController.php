@@ -17,8 +17,8 @@ class CarrinhoController extends Controller
 
     public function exibir(Request $request){
         if($request->session()->has("carrinho")){
-         
-    
+
+
             $carrinho = $request->session()->get("carrinho");
         $produtos=[];
 
@@ -32,17 +32,17 @@ class CarrinhoController extends Controller
     }
 
     public function adicionar(Request $request, $id){
-     
+
             if(!$request->session()->has("carrinho")){
                 $request->session()->put('carrinho', [
                     [
                         'product_id'     => $id,
                         'qty'             => 1,
-                    ] 
+                    ]
                 ]);
             }
-            
-            
+
+
            $carrinho = $request->session()->get("carrinho");
            $carrinho[]= [
                "product_id" => $id,
@@ -50,13 +50,45 @@ class CarrinhoController extends Controller
            ];
 
            $request->session()->put("carrinho",$carrinho);
-    
 
-    return redirect('/carrinho/exibir');   
-    
+
+    return redirect('/carrinho/exibir');
+
     }
 
     // public function remover(Request $request){
 
     // }
 }
+
+// Route::get('/shopcard', function () {
+//     return view('shopcard');
+// });
+
+// class CardController extends Controller
+// {
+
+//  public function add(Request $res, $idProduct){
+//      //pergunta se existe uma sessão ativa
+
+//     if($res->session()->has('cart')){
+//         $cart = $res->session()->get('cart');
+
+//         $cart[] = [$idProduct];
+//         $res->session()->put('cart', $cart);
+//         return "Deu bom caralho";
+
+//     }else {
+//         $cart = [[$idProduct]];
+//         $res->session()->put('cart', $cart);
+//         return "Deu bom caralho";
+//     }
+
+//  }
+//  public function viewCart(Request $res)
+//  {
+//     $cart = $res->session()->get('cart');
+//     dd ($cart);
+//  }
+
+// }

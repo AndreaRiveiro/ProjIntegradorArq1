@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Carrinho' => $baseDir . '/app/Carrinho.php',
     'App\\Categoria' => $baseDir . '/app/Categoria.php',
     'App\\Cliente' => $baseDir . '/app/Cliente.php',
     'App\\Compra' => $baseDir . '/app/Compra.php',
@@ -20,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\CadastroController' => $baseDir . '/app/Http/Controllers/CadastroController.php',
     'App\\Http\\Controllers\\CarrinhoController' => $baseDir . '/app/Http/Controllers/CarrinhoController.php',
+    'App\\Http\\Controllers\\CategoriaController' => $baseDir . '/app/Http/Controllers/CategoriaController.php',
     'App\\Http\\Controllers\\ContatoController' => $baseDir . '/app/Http/Controllers/ContatoController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DepartamentoController' => $baseDir . '/app/Http/Controllers/DepartamentoController.php',
@@ -27,6 +29,7 @@ return array(
     'App\\Http\\Controllers\\PrincipalController' => $baseDir . '/app/Http/Controllers/PrincipalController.php',
     'App\\Http\\Controllers\\ProdutoController' => $baseDir . '/app/Http/Controllers/ProdutoController.php',
     'App\\Http\\Controllers\\SobreController' => $baseDir . '/app/Http/Controllers/SobreController.php',
+    'App\\Http\\Controllers\\passwordController' => $baseDir . '/app/Http/Controllers/passwordController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -36,7 +39,6 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Item' => $baseDir . '/app/Item.php',
-    'App\\ListadeDesejo' => $baseDir . '/app/ListadeDesejo.php',
     'App\\Pagamento' => $baseDir . '/app/Pagamento.php',
     'App\\Produto' => $baseDir . '/app/Produto.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
@@ -46,7 +48,6 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Recebimento' => $baseDir . '/app/Recebimento.php',
     'App\\Ultimas_Busca' => $baseDir . '/app/Ultimas_Busca.php',
-    'App\\pedido' => $baseDir . '/app/pedido.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
     'BeyondCode\\DumpServer\\DumpServerServiceProvider' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
     'BeyondCode\\DumpServer\\Dumper' => $vendorDir . '/beyondcode/laravel-dump-server/src/Dumper.php',
@@ -80,6 +81,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+    'CriarCategoria' => $baseDir . '/database/seeds/CriarCategoria.php',
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

@@ -49,17 +49,17 @@ Route::get('/produto', 'ProdutoController@index');
 Route::get('/cadastroProduto','ProdutoController@create');
 Route::post('/cadastroProduto', 'ProdutoController@create');
 
-Route::get('/produto/editar/{id}',"ProdutoController@editar"); 
+Route::get('/produto/editar/{id}',"ProdutoController@editar");
 Route::post('/produto/editar/{id}',"ProdutoController@editar");
 
 // Route::deletar('/produto/excluir','PedidoController@excluir');
 
 
-// Routes Pedido + Carrinho 
-    Route::get('/carrinho','CarrinhoController@index');
+// Routes Pedido + Carrinho
+    Route::get('/carrinho','CarrinhoController@exibir');
     Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
 
-Route::post('/carrinho/exibir', 'CarrinhoController@exibir');
+Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
 
 Route::get('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
@@ -71,11 +71,11 @@ Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 // Route::get('/categoria','CategoriaController@mostrarcategorias');
 
 
-/* Logout */                   
+/* Logout */
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-/* Editar Cadastro Cliente*/   
-Route::get('/editarCadastro/{id}','CadastroController@editar')->middleware('auth');  
+/* Editar Cadastro Cliente*/
+Route::get('/editarCadastro/{id}','CadastroController@editar')->middleware('auth');
 Route::post('/editarCadastro/{id}','CadastroController@editar')->middleware('auth');
 
 

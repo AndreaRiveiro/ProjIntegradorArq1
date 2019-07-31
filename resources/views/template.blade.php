@@ -22,7 +22,7 @@
         <section id="containerNav" class="nav d-flex col-lg-12 col-md-12 col-sm-12">
             <nav id="navTopo" class="row">
                 <div class="col-3">
-                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
+                    <a href="/principal"><img src="/img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
                 </div>
                 <div id="containerSearch" class="container-fluid justify-content-around col-5">
                     <form action="" method="GET">
@@ -31,20 +31,20 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                </div>                
+                </div>
                 <div class="row d-flex justify-content-center col-3">
                     @guest
-                        <div id="divRightLineTwo" class="col-3">           
-                                @include('auth.login') 
+                        <div id="divRightLineTwo" class="col-3">
+                                @include('auth.login')
                         </div>
-                        <div id="cadastrar" class="d-flex align-items-center col-4">     
+                        <div id="cadastrar" class="d-flex align-items-center col-4">
                             <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
                                 <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
                                 Cadastre-se
                             </a>
                         </div>
-                    @endguest  
-                
+                    @endguest
+
                     @auth
                     <div id="containerLogado">
                         <p id="primNome">
@@ -54,7 +54,7 @@
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div id=menuDeslogar class="card card-body">
-                                <p id="editarCad">                             
+                                <p id="editarCad">
                                     <a href="/editarCadastro/{{auth()->user()->id}}">
                                         <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
                                             <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
@@ -65,8 +65,8 @@
                                     <i class="fa fa-user-times" style="font-size:1.2em;color:#000505"></i>Logout!</button>
                                 </a>
                             </div>
-                        </div>   
-                    </div>          
+                        </div>
+                    </div>
                     @endauth
 
                     <div class="d-flex align-items-center">
@@ -106,7 +106,7 @@
                     <!--  Comeco menu de Produtor-->
                     <li>Home</li>
                     <li id="listaLojas" class="navbar-item dropdown">
-    
+
                         <a class="nav-link dropdown-toggle botao-busca tituloMenu" data-toggle="dropdown" href="#"
                             role="button" aria-haspopup="true" aria-expanded="false">Lojas</a>
                         <div class="dropdown-menu subMenu">
@@ -124,7 +124,7 @@
                             <a class="dropdown-item subTitulo" href="pageDepartamentos.html">Alimentos</a>
                             <a class="dropdown-item subTitulo" href="#">Beleza</a>
                             <a class="dropdown-item subTitulo" href="#">Casa</a>
-                            
+
                         </div>
                     </li>
                     <!--   Final menu de Departamentos -->
@@ -134,7 +134,7 @@
             </nav>
         </section>
     </header>
-    
+
     <div class="bd-example">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -145,7 +145,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/banner2.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/banner2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3></h3>
                         <p></p>
@@ -157,21 +157,21 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/banner3.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/banner3.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3></h3>
                         <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/positiva.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/positiva.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3></h3>
                         <p></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/sustenta.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/sustenta.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3></h3>
                         <p></p>
@@ -217,7 +217,7 @@
         </li>
       </ul>
     </div>
-  
+
     <div class="col-md-3 mb-md-0 mb-3">
       <h5 class="text-uppercase">Links</h5>
       <ul class="list-unstyled">
@@ -253,7 +253,7 @@
                     <label> Copyright © 2019 | MeSustenta </label>
                 </div>
                 <div>
-                    <img src="img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
+                    <img src="/img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
                 </div>
             </div>
         </section>
