@@ -10,6 +10,7 @@ class CategoriaController extends Controller
 {
     public function index($id="todos")
     {
+
         $todasCategorias = Categoria::all();
         if($id == "todos"){
             $produtos = Produto::all();
@@ -20,13 +21,5 @@ class CategoriaController extends Controller
     }
 
 
-    public function mostrarProdutos($id)
-
-    {
-        $produtos = Produto::where('codigo_categoria', $id)->get();
-        foreach ($produtos as $key => $value) {
-            echo $value->nome_produto;
-        }
-    }
-}
+  }
 
