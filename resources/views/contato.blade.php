@@ -3,20 +3,11 @@
 @section('container')
 
  <!-- formulario para contato  -->
-<<<<<<< HEAD
- <section class="container romd1">
-        <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 romd">
-
-            <div class="contato-content col-12 col-sm-10">
-                <div class="contato-titulo">
-                    <h1 id="contatonome" href="/contato">Contato</h1>
-=======
  <div class="container">
     <div class="row">
         <div class="col">
                 <div class="contato-titulo">
                         <h1 id="contatonome" href="/contato">Fale Conosco</h1>
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
                 </div>
                 <form id="form-contato" method="get" action="/contato">
                     <div class="form-row">
@@ -42,14 +33,6 @@
                         <button id="bt_submit" type="submit" name='contato' class="btn btn-primary btn-conts">Enviar</button>
                         <input type="reset" value="Limpar" name="btnctn" class="btn btn-primary">
                     </div>
-<<<<<<< HEAD
-            </div>
-            </form>
-        </div>
-        </div>
-    </section>
-    
-=======
                 </form>
         </div>
         <div class="col">
@@ -86,7 +69,6 @@
         </div>
     </div>
 </div>
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 
     
  <script src="{{asset('js/contato.js')}}"></script>

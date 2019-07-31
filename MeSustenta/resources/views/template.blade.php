@@ -18,11 +18,13 @@
     <title>MeSustenta</title>
 </head>
 <body>
-    <header>
+<header>
         <section id="containerNav" class="nav d-flex col-lg-12 col-md-12 col-sm-12">
             <nav id="navTopo" class="row">
-                <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
-                <div id="containerSearch" class="justify-content-around col-4">
+                <div class="col-3">
+                    <a href="/principal"><img src="img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
+                </div>
+                <div id="containerSearch" class="container-fluid justify-content-around col-5">
                     <form action="" method="GET">
                         <input type="search" name="buscah" size="24" placeholder="  O que você está procurando">
                         <button type="submit">
@@ -30,14 +32,14 @@
                         </button>
                     </form>
                 </div>                
-                <div class="row d-flex justify-content-around col-4">
+                <div class="row d-flex justify-content-center col-3">
                     @guest
-                        <div id="divRightLineTwo" class="col-5">           
+                        <div id="divRightLineTwo" class="col-3">           
                                 @include('auth.login') 
                         </div>
                         <div id="cadastrar" class="d-flex align-items-center col-4">     
                             <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
-                                <i class="fa fa-thumbs-up" style="font-size:1em;color:#000505"></i>
+                                <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
                                 Cadastre-se
                             </a>
                         </div>
@@ -55,20 +57,20 @@
                                 <p id="editarCad">                             
                                     <a href="/editarCadastro/{{auth()->user()->id}}">
                                         <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                            <i class="fa fa-pencil-square-o" style="font-size:1em;color:#000505"></i>Editar Cadastro
+                                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
                                         </button>
                                     </a>
                                 </p>
                                 <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                    <i class="fa fa-user-times" style="font-size:1em;color:#000505"></i>Logout!</button>
+                                    <i class="fa fa-user-times" style="font-size:1.2em;color:#000505"></i>Logout!</button>
                                 </a>
                             </div>
                         </div>   
                     </div>          
                     @endauth
 
-                    <div>
-                        <a href="/carrinho/exibir"><img src="img/iconeCarP.png" alt=""></a>
+                    <div class="d-flex align-items-center">
+                        <a href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
                     </div>
                 </div>
             </nav>

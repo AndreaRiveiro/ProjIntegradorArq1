@@ -12,25 +12,43 @@ body {
   
 }
 /* Início Header*/
-#containerNav {
-    background: white;
-    padding: 0%;
-    width: 100%;
+
+#containerNav{
+    padding: 0;
 }
 
 #navTopo {
     margin: 1% 4% 0% 4%;
     width: 100vw;
-    height: 16vh;
     justify-content: space-between;
     align-items: flex-start;
+    flex-flow: row wrap;
+
+}
+
+#navTopo a{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#imgLogoMeSustenta{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+}
+
+#containerSearch form{
+    display: flex;
+    justify-content: center;
 }
 
 #containerSearch form input {
     height: 4vh;
     font-size: 1em;
-    border-color: #4fc4be;
+    border-color: #000505;
     border-radius: 5%;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -38,11 +56,7 @@ body {
     height: 6vh;
     size: 30%;
     font-size: 1.1em;
-<<<<<<< HEAD
-    border-color: #4fc4be;
-=======
-    border-color: rgba(70, 166, 94);
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
+    border-color: #000505;
     border-radius: 5%;
     text-align: center;
 }
@@ -52,21 +66,21 @@ body {
     font-family: 'Lucida Grande';
     font-size: 1.1em;
     font-style: oblique;
-    color: #4370d7;
+    color: #000505;
 }
 
 #containerSearch form input::placeholder {
     font-family: 'Lucida Grande';
     font-size: 1.1em;
     font-style: oblique;
-    color: #4370d7;
+    color: #000505;
 }
 
 #containerSearch form textarea::placeholder {
     font-family: 'Lucida Grande';
     font-size: 1.1em;
     font-style: oblique;
-    color: #4370d7;
+    color: #000505;
 }
 
 /* alterando caracteristicas do placeholder - fim */
@@ -77,17 +91,21 @@ body {
 
 #containerSearch form button i {
     font-size: 1.5em;
-    color: #4fc4be;
-}
-
-#buttonLogin{
-    font-size: 0.8em;
-    margin: 1% 0% 0% 0%;
-    color: #4fc4be;
+    color: #000505;
 }
 
 #divRightLineTwo{
     z-index: 10;
+}
+
+#cadastrar{
+    padding: 0;
+    justify-content: center;
+}
+
+.fafaCar{
+    color: black;
+    font-size: 1.2em;
 }
 
 #navBase {
@@ -129,15 +147,11 @@ body {
 }
     /*Menu Responsivo Início*/
 #toggle{
-<<<<<<< HEAD
-    display: visible;
-=======
     display: none;
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 }
 
 #menuResponsivo{
-    display: visible;
+    display: none;
 } 
 
 /* Criando o Hamburguer - Início*/
@@ -149,12 +163,13 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 2;
+    display: none;
 }
 
 #toggle span,
 #toggle span:before,
 #toggle span:after{
-    background: #4fc4be;
+    background: #000505;
     display: block;
     height: 4px;
     position: absolute;
@@ -192,14 +207,14 @@ body {
     transform: rotate(-45deg);
     top: 13px;
     width: 27px;
-    background: #4fc4be;
+    background: #000505;
 }
 
 #toggle.close span:before{
     top: 0px;
     transform: rotate(90deg);
     width: 27px;
-    background: #4fc4be;
+    background: #000505;
 }
 
 #toggle.close span:after{
@@ -230,7 +245,7 @@ body {
         opacity: 1;
         visibility: visible;
         padding-top: 100px;
-        background: #041847;
+        background: #fff;
     }
     
     #menuResponsivo li{
@@ -333,7 +348,6 @@ body {
 .espacoProduto{
     margin-bottom: 50px;
 }
-<<<<<<< HEAD
 /* form contato begin */
 
 .contato-content {
@@ -444,13 +458,6 @@ h1#contatonome{
  }
 
 /* pagina sobre end */
-=======
-
-
-
-
-
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 
 /* produto  begin*/
 
@@ -474,19 +481,9 @@ h1#contatonome{
 /* card imagens end */
 
 /* imagem logo */
-<<<<<<< HEAD
 #imagemlogo {
     width: 40%;
     height: 40%;
-=======
-.imagemlogo {
-    width: 80%;
-    height: 20%;
-}
-#imgLogoMeSustenta{
-    width: 80%;
-    height: 20%;
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
 }
 
 
@@ -651,10 +648,6 @@ footer{
     width: 100%;
     left: 0%;
     background-color: rgba(70, 166, 94,0.7);
-<<<<<<< HEAD
-=======
-    
->>>>>>> 8595328926fdf95bced5a23d5a5e96a421ef5603
   
 }
 
