@@ -38,8 +38,8 @@
                                 @include('auth.login') 
                         </div>
                         <div id="cadastrar" class="d-flex align-items-center col-4">     
-                            <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
-                                <i class="fa fa-thumbs-up" style="font-size:1em;color:#000505"></i>
+                            <a id="addLogin" href="/cadastro" style="font-size:0.8em;color:#000505">
+                                <i class="fa fa-thumbs-up" style="font-size:1.1em;color:#000505"></i>
                                 Cadastre-se
                             </a>
                         </div>
@@ -56,12 +56,12 @@
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">                             
                                     <a href="/editarCadastro/{{auth()->user()->id}}">
-                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#4fc4be">
+                                        <button id="btnEditarCd" type="button" class="btn btn-outline-default col-12" style="font-size:0.8em;color:#000505">
                                             <i class="fa fa-pencil-square-o" style="font-size:1em;color:#000505"></i>Editar Cadastro
                                         </button>
                                     </a>
                                 </p>
-                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#4fc4be">
+                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-default col-12" style="font-size:0.8em;color:#000505">
                                     <i class="fa fa-user-times" style="font-size:1em;color:#000505"></i>Logout!</button>
                                 </a>
                             </div>

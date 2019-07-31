@@ -34,7 +34,7 @@
         </div>
         <!--Footer modal Login Início -->
         <div class="containerFooter">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn-default cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn-outline-phpdefault cancelbtn">Cancel</button>
           <div class="width-100%"></div>
           <button type="submit"  onclick="myFuncCadastro()" class="bntCadastro ">Cadastre-se</button>
             @if (Route::has('password.request'))
