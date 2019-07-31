@@ -12,18 +12,30 @@ body {
   
 }
 /* Início Header*/
-#containerNav {
-    background: white;
-    padding: 0%;
-    width: 100%;
+
+#containerNav{
+    padding: 0;
 }
 
 #navTopo {
     margin: 1% 4% 0% 4%;
     width: 100vw;
-    height: 16vh;
     justify-content: space-between;
     align-items: flex-start;
+    flex-flow: row wrap;
+
+}
+
+#navTopo a{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#imgLogoMeSustenta{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row;
 }
 
 #containerSearch form input {
@@ -37,7 +49,7 @@ body {
 #containerSearch form input::-moz-placeholder {
     height: 6vh;
     size: 30%;
-    font-size: 1em;
+    font-size: 1.1em;
     border-color: #000505;
     border-radius: 5%;
     text-align: center;
@@ -125,11 +137,11 @@ body {
 }
     /*Menu Responsivo Início*/
 #toggle{
-    display: visible;
+    display: none;
 }
 
 #menuResponsivo{
-    display: visible;
+    display: none;
 } 
 
 /* Criando o Hamburguer - Início*/
@@ -327,50 +339,13 @@ body {
 }
 /* form contato begin */
 
-.contato-content {
-    margin: 8%;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
-    border: 4px solid #4fc4be;
-    border-radius: 10px;
-    background-color: white;
+#forms{
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
-.contato-content .contato-titulo {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.contato-content form {
-    width: 100%;
-     padding: 10%;
 
-}
-.botao{
-    margin-top: 2px;
-}
-
-h1#contatonome{
-    margin-top: 90px;
-}
-.romd{
-    margin: -7%;
-    margin-top: -3%;
-}
-
-.romd1{
-    max-width: 480px;
-}
-
-.mkrt{
-    margin-top: 2%;
-}
 
 /* form contato end */
 

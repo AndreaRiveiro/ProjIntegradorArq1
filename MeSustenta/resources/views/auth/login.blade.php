@@ -1,4 +1,4 @@
-<button onclick="document.getElementById('id01').style.display='block'" class="btn-default" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
+<button onclick="document.getElementById('id01').style.display='block'" class=" btn btn-defult" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
     <div class="card-header" hidden>{{ __('Login') }}</div>
     <div id="id01" class="modal">
         <form class="modal-content animate" method="POST" action="{{ route('login') }}">
@@ -10,7 +10,7 @@
         <div class="container">
           <label for="email"><b>{{ __('E-Mail Address') }}</b></label>
           <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="Digite seu E-mail" name="email" required autocomplete="email" autofocus>
-          <i class="fa fa-eye-slash" style="font-size: 1em"></i>
+          <i class="fa fa-eye-slash" style="font-size: 1.6em"></i>
                  @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

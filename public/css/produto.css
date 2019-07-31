@@ -249,12 +249,6 @@ body {
  } 
 
 
-
-
-
-
-
-
 /* Imagem  produtos modal  */
 
 .modal {
@@ -318,7 +312,6 @@ body {
     }
   }
 
-
 /* imagem modal end */
 
 /* img produtos */
@@ -343,9 +336,6 @@ footer{
     left: 0%;
 }
 
-
-
-
 #listaRedeSocial {
     list-style: none;
     width: 100%;
@@ -360,4 +350,5 @@ footer{
     width: 10%;
 
 } */
+
 /* footer end */

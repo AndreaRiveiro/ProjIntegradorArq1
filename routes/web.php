@@ -61,6 +61,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
 });
 
+
 Route::post('/carrinho/exibir', 'CarrinhoController@exibir');
 
 Route::get('/carrinho/adicionar/{id}','CarrinhoController@adicionar');

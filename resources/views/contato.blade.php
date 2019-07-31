@@ -9,6 +9,11 @@
             <div class="contato-content col-12 col-sm-10">
                 <div class="contato-titulo">
                     <h1 id="contatonome" href="/contato">Contato</h1>
+ <div class="container">
+    <div class="row">
+        <div class="col">
+                <div class="contato-titulo">
+                        <h1 id="contatonome" href="/contato">Fale Conosco</h1>
                 </div>
                 <form id="form-contato" method="get" action="/contato">
                     <div class="form-row">
@@ -39,7 +44,7 @@
         </div>
         </div>
     </section>
-    
+   
 
     
  <script src="{{asset('js/contato.js')}}"></script>
