@@ -10,7 +10,7 @@
             <img src="img~/corn_rs.png" alt="">
             <article class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 textovideo">
-                    <h2>Nossa História</h2>
+                    <h2>Nossa História!</h2>
 
                     <p class="font">O site nasceu do desejo de 3 desenvolvedoras de facilitar o acesso a produtos e marcas
                         sustentáveis, através da concentração destas em um único local. Notamos que um dos grandes
