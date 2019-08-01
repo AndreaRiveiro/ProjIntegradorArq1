@@ -14,11 +14,19 @@ class CriarCategoria extends Seeder
     {
         {
             $alimentos = new Categoria();
-            $alimentos->idCategoria = 01400000;
+            $alimentos->idCategoria = "Alimentos";
             $alimentos->tipo_categoria = "Alimentos";
             $alimentos->descricao = "Alimentos bons";
-            $alimentos->departamento = "TEste";
             $alimentos->save();
+
+        }
+
+        {
+            $beleza = new Categoria();
+            $beleza->idCategoria = "Beleza";
+            $beleza->tipo_categoria = "Beleza";
+            $beleza->descricao = "Produtos Bons";
+            $beleza->save();
 
         }
     }

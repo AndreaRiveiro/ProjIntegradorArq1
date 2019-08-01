@@ -23,7 +23,6 @@ class Produtos extends Migration
             $table->string("codigo_do_produto");
             $table->string("codigo_categoria");
             $table->string("codigo_fornecedor");
-            $table->string("departamento");
             $table->decimal("quantidade_em_estoque");
             $table->string("nome_loja");
             $table->decimal("estoque_maximo");

@@ -15,7 +15,6 @@ class UltimasBuscas extends Migration
     {
         Schema::create('ultimas_buscas', function (Blueprint $table) {
             $table->bigIncrements('idUltimasBuscas');
-            $table->string("departamentos_ult");
             $table->string("nome_ult");
             $table->string("categoria_ult");
             $table->unsignedBigInteger('fk_idCliente');

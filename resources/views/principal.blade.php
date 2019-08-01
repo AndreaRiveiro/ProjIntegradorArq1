@@ -34,7 +34,7 @@
 <div class="container-fluid">
         <h1 class="text-center mb-3">Produtos</h1>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner row w-100 mx-auto">
+          <div class="carousel-inner row  w-100  mx-auto">
             <div class="carousel-item col-md-4 active">
               <div class="card">
                 <img class="card-img-top img-fluid" src="/img/cebola.jpg" alt="Card image cap">
@@ -117,6 +117,6 @@
         </div>
       </div>
 </div>
+</div>
 
-      <script src="{{asset('js/script.js')}}"></script>
 @endsection

@@ -36,25 +36,32 @@ class ProdutoController extends Controller
         $novoProduto->quantidade_em_estoque = $request->quantidadeEstoque;
         $novoProduto->estoque_maximo = $request->estoqueMaximo;
         $novoProduto->descricao_prod = $request->descricao;
-        $novoProduto->departamento = $request->departamento;
         $novoProduto->codigo_fornecedor = $request->codigoFornecedor;
         $novoProduto->nome_loja = $request->nomeloja;
         $novoProduto->preco_venda = $request->precoVenda;
         $novoProduto->produto_status = $request->statusProduto;
-        $novoProduto->imagens = $request->imagens;
-        
+
+
+        // //Pegando o nome original do arquivo
+        //  $nomeOriginal = $data['avatar']->getClientOriginalName();
+        //  //Montando a url necessária para acessar o arquivo corretamente
+        //  $caminhoimg  = 'storage/img/' . $nomeOriginal;
+
+        //  //Salvando apenas a imagem
+        //  $save = $data['avatar']->storeAs('public/img', $nomeOriginal);
+
 
 
         $resultado = $novoProduto->save();
 
-                    
+
         return view('cadastroProduto',["resultado" => $resultado]);
 
         }
 
-        
-    
-     
+
+
+
     public function editar(Request $request, $id){
         if($request->isMethod('GET')){
             $produto = Produto::find($id);
@@ -69,7 +76,6 @@ class ProdutoController extends Controller
         $produto->quantidade_em_estoque = $request->quantidadeEstoque;
         $produto->estoque_maximo = $request->estoqueMaximo;
         $produto->descricao_prod = $request->descricao;
-        $produto->departamento = $request->departamento;
         $produto->codigo_fornecedor = $request->codigoFornecedor;
         $produto->nome_loja = $request->nomeloja;
         $produto->preco_venda = $request->precoVenda;

@@ -6,7 +6,7 @@ toggle.addEventListener('click', function(){
     show.classList.toggle("show");
 })
 
-/// jquery
+// jquery
 
 $(document).ready(function() {
     $("#myCarousel").on("slide.bs.carousel", function(e) {
