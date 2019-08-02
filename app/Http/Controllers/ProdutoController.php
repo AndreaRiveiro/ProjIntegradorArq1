@@ -42,13 +42,16 @@ class ProdutoController extends Controller
         $novoProduto->produto_status = $request->statusProduto;
 
 
-        // //Pegando o nome original do arquivo
-        //  $nomeOriginal = $data['avatar']->getClientOriginalName();
-        //  //Montando a url necessária para acessar o arquivo corretamente
-        //  $caminhoimg  = 'storage/img/' . $nomeOriginal;
 
-        //  //Salvando apenas a imagem
-        //  $save = $data['avatar']->storeAs('public/img', $nomeOriginal);
+        //Pegando o nome original do arquivo
+         $nomeOriginal = $request->file('imagens')->getClientOriginalName();
+         //Montando a url necessária para acessar o arquivo corretamente
+         $caminhoimg  = '/storage/img/' . $nomeOriginal;
+
+         //Salvando apenas a imagem
+         $save = $request->file('imagens')->storeAs('public/img', $nomeOriginal);
+
+         $novoProduto->imagens = $caminhoimg;
 
 
 
