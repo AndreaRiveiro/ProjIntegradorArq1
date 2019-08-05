@@ -69,8 +69,8 @@
                     </div>
                     @endauth
 
-                    <div class="d-flex align-items-center">
-                        <a href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
+                    <div class="d-flex align-items-center w-25">
+                        <a class="fafaCar" href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
                     </div>
                 </div>
             </nav>
