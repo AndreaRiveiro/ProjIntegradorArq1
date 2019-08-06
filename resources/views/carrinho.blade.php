@@ -23,15 +23,18 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($produtos as $produto)
+        @forelse($produtos as $produto)
             <tr>
 
               <td>{{ $produto->idProduto }}</td>
               <td>{{ $produto->nome_produto}}</td>
               <td>{{ $produto->quantidade_em_estoque}}</td>
+            <td>{{$produto->preco_venda}}</td>
               <td></td>
             </tr>
-          @endforeach
+        @empty
+        <h2>Carrinho vazio</h2>
+          @endforelse
         </tbody>
         </table>
 

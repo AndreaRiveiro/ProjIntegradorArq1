@@ -2,7 +2,11 @@
 
 /* pagina sobre begin */
 
-.sobre-conteudo.sobre-imagem {
+*{
+    padding: 0px;
+}
+
+/* .sobre-conteudo.sobre-imagem {
     height: 40%;
     margin-top: 3%;
     display: flex;
@@ -11,37 +15,91 @@
     height: 40vh;
     background-image: url(../img/3rs-590x245.jpg);
     background-size: cover;
-  }
-  
-  .sobre-conteudo .sobre-controle {
+  } */
+
+  /* .sobre-conteudo .sobre-controle {
     background-color: #fff;
     padding: 3%;
     display: flex;
     justify-content: center;
     background-image: url()
   }
-  
+
   .sobre-conteudo .sobre-controle video {
     width: 80%;
     height: 60vh;
     object-fit: cover;
-  }
- 
-  
+  } */
+
+/*
   .sobre-conteudo .sobre-controle article {
     width: 60%;
     display: flex;
     padding: 3%;
     justify-content: space-around;
+  } */
+
+
+main.container{
+    padding: 0%;
+}
+section.container-fluid.sobre{
+    padding: 0%;
+    margin: 0%;
+}
+
+.col-12 {
+    margin-top: 3%;
+    padding: 0;
+
   }
-  
-  .sobre-conteudo .sobre-controle p {
-    margin-top: 1%;
+h2.titulo{
+    margin-top: 2%;
+    font-size: 36px;
+}
+
+.cards-r{
+    margin-top: 4%;
+    font-family: Nunito,sans-serif;
     text-align: justify;
-  }
- .textovideo{
-     font-size: 16px;
- }
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 4%;
+}
+p.font{
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+.texto{
+    padding: 0;
+    font-family: Nunito,sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    justify-content: center;
+}
+
+p.card-text.tresR{
+    font-family: Nunito,sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.card-deck .sobre-conteudo{
+    font-family: Nunito,sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    padding: 0;
+}
+
+div.row.col-12.sobre-controle.sobre-conteudo{
+    margin: 0%;
+    padding: 0%;
+}
+
+div.card-body{
+    margin-bottom: 3%;
+}
 
 /* pagina sobre end */
 
@@ -58,7 +116,7 @@
 
 .videomd{
     align-self: center;
-    
+
 }
 
 

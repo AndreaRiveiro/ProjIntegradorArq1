@@ -9,24 +9,25 @@ toggle.addEventListener('click', function(){
 // jquery
 
 $(document).ready(function() {
-    $("#myCarousel").on("slide.bs.carousel", function(e) {
+    $("#carousel-card").on("slide.bs.carousel", function(e) {
+
       var $e = $(e.relatedTarget);
       var idx = $e.index();
       var itemsPerSlide = 3;
-      var totalItems = $(".carousel-item").length;
+      var totalItems = $(".card-carousel-item").length;
 
       if (idx >= totalItems - (itemsPerSlide)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i = 0; i < it; i++) {
           // append slides to end
           if (e.direction == "left") {
-            $(".carousel-item")
+            $(".card-carousel-item")
               .eq(i)
-              .appendTo(".carousel-inner");
+              .appendTo(".card-carousel-inner");
           } else {
-            $(".carousel-item")
+            $(".card-carousel-item")
               .eq(0)
-              .appendTo($(this).find(".carousel-inner"));
+              .appendTo($(this).find(".card-carousel-inner"));
           }
         }
       }
