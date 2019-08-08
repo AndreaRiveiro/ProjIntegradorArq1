@@ -12,6 +12,7 @@ class CategoriaController extends Controller
     {
 
         $todasCategorias = Categoria::all();
+
         if($id == "todos"){
             $produtos = Produto::all();
         }else {

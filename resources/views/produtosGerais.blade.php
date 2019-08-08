@@ -6,7 +6,7 @@
 
 @foreach ($todosProdutos as $produto)
     <div class="card-prodGerais" style="width: 18rem;">
-    <img src="{{asset('img/VivaAmazon/saboneteArgila.png')}}" class="card-img-top" alt="...">
+    <img src="{{url("$produto->imagens")}}" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{$produto->nome_produto}} <a href="/produto/editar/{{$produto->idProduto}}">Editar</a></h5>
         <p class="card-text">{{$produto->descricao_pro}} <a href="/produto/editar/{{$produto->descricao}}"></a></p>
@@ -23,9 +23,9 @@
     </div> -->
     </div>
 
-    
 
-    
+
+
 
 @endforeach
 </ul>

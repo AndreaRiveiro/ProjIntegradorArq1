@@ -112,8 +112,7 @@
                     <!-- Menu Hamburguer Fim-->
                 <div id="menuBase" class="container-fluid">
                     <!--  Comeco menu de Produtor-->
-                    <li>Home</li>
-                    <li id="listaLojas" class="navbar-item dropdown">
+                    {{-- <li id="listaLojas" class="navbar-item dropdown">
 
                         <a class="nav-link dropdown-toggle botao-busca tituloMenu" data-toggle="dropdown" href="#"
                             role="button" aria-haspopup="true" aria-expanded="false">Lojas</a>
@@ -122,22 +121,23 @@
                             <a class="dropdown-item subTitulo" href="AlimentosPage.html">RAIZS</a>
                             <a class="dropdown-item subTitulo" href="#">VIVA AMAZON</a>
                         </div>
-                    </li>
+                    </li> --}}
                     <!--    Final menu de Produtor-->
                     <!--   Comeco menu de Departamentos -->
                     <li id="listaDepartamentos" class="navbar-item dropdown">
                         <a class="nav-link dropdown-toggle botao-busca tituloMenu" data-toggle="dropdown" href="#"
                             role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
                         <div class="dropdown-menu subMenu">
-                            <a class="dropdown-item subTitulo" href="pageDepartamentos.html">Alimentos</a>
-                            <a class="dropdown-item subTitulo" href="#">Beleza</a>
-                            <a class="dropdown-item subTitulo" href="#">Casa</a>
+                            <a class="dropdown-item subTitulo" href="/categoria/1">Alimentos</a>
+                            <a class="dropdown-item subTitulo" href="/categoria/2">Beleza</a>
+                            <a class="dropdown-item subTitulo" href="/categoria/3">Casa, Mesa e Banho</a>
 
                         </div>
                     </li>
                     <!--   Final menu de Departamentos -->
-                    <li><a class="tituloMenu" href="/sobre">Quem Somos</a></li>
-                    <li><a class="tituloMenu" href="/contato">Contato</a></li>
+                    <li><a class="tituloMenu" href="/categoria/1">Alimentos</a></li>
+                    <li><a class="tituloMenu" href="/categoria/2">Beleza</a></li>
+                    <li><a class="tituloMenu" href="/categoria/3">Casa, Mesa e Banho</a></li>
                 </div>
             </nav>
         </section>
@@ -194,70 +194,58 @@
 
     </main>
  <!--FOOTER InÍCIO-->
- <footer class="page-footer font-small blue pt-4">
+ <footer class="page-footer font-small blue pt-4 ftr">
 
-<section>
-<div class="container-fluid text-center text-md-left">
-  <div class="row">
-    <div class="col-md-6 mt-md-0 mt-3">
-      <h5 class="text">MeSustenta</h5>
-      <p>Por uma vida mais sustentavél e natural.</p>
+<section >
+    <div class="container-fluid text-center text-md-left">
+    <div class="row section-footer">
+        <div class="col-md-6 col-lg-3 item-f">
+            <h5 class="text">MeSustenta</h5>
+            <p>Por uma vida mais sustentavél e natural.</p>
+
+            <label> Copyright © 2019 | MeSustenta </label>
+        </div>
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3 col-lg-3 ">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled item-f">
+                <li>
+                <a href="/sobre">Nosso Objetivo</a>
+                </li>
+                <li>
+                <a href="/sobre">Quem somos</a>
+                </li>
+                <li>
+                <a href="/contato">Contato</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col-md-3 mb-md-0 mb-3 col-lg-3  ">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled item-f">
+                <li>
+                <a href="/principal">Home</a>
+                </li>
+                <li>
+                <a href="/categoria">Categorias</a>
+                </li>
+                <li>
+                <a href="#!">Termos de Uso</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-3 imagem-ftr">
+                <img src="/img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
+        </div>
     </div>
-    <hr class="clearfix w-100 d-md-none pb-3">
-    <div class="col-md-3 mb-md-0 mb-3">
-      <h5 class="text-uppercase">Links</h5>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#!">Nosso Objetivo</a>
-        </li>
-        <li>
-          <a href="/sobre">Quem somos</a>
-        </li>
-        <li>
-          <a href="/contato">Contato</a>
-        </li>
-      </ul>
     </div>
 
-    <div class="col-md-3 mb-md-0 mb-3">
-      <h5 class="text-uppercase">Links</h5>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#!">Termos de Uso</a>
-        </li>
-        <li>
-          <a href="#!">Home</a>
-        </li>
-        <li>
-          <a href="#!">Categorias</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 </section>
 
-<section class="fot">
-            <div class="ftr">
-                <div class="contato">
-                    <nav id="navCenter" class="container-fluid">
-                        <div id="containerMeio" class="container-fluid">
-                            <ul id="listaRedeSocial" class="row">
-                                <li><a id="iconWhats" href="#" class="fa fa-whatsapp"></a></li>
-                                <li><a id="iconFace" href="#" class="fa fa-facebook"></a></li>
-                                <li><a id="iconTwitter" href="#" class="fa fa-twitter"></a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div>
-                    <label> Copyright © 2019 | MeSustenta </label>
-                </div>
-                <div>
-                    <img src="/img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
-                </div>
-            </div>
-        </section>
+
+
 <!-- Copyright -->
 
 </footer>

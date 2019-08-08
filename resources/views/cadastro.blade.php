@@ -6,7 +6,7 @@
 
 <div class="card cadastro-content col-md-8">
     <div class="cadastro-titulo">
-        <h1>Formulário de Cadastro</h1>
+        <h1>Cadastro</h1>
     </div>
 
     <form id="form-cadastro" method="POST" action="/cadastro">
@@ -15,50 +15,50 @@
         <div class="form-group" >
 
             <div>
-            <label for='name'>{{ __('Name') }}</label>
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nome" value="{{ old('name') }}" required autocomplete="name" autofocus>
+            <label for='name'>{{ __('Nome') }}</label>
+                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"  value="{{ old('name') }}" required autocomplete="name" autofocus>
                 @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror  
+                @enderror
             </div>
             <div>
                 <label>Sobrenome</label>
-                <input type="text" class="form-control casds" name="lastName" placeholder="Sobrenome">
-            </div>         
+                <input type="text" class="form-control casds" name="lastName" >
+            </div>
 
         </div>
         <!-- Informações Endereço -->
         <div class="form-group">
             <div>
                 <label for="endereco">Endereço</label>
-                <input type="text" class="form-control casds" id="end" name='endereco' placeholder="Endereço">
+                <input type="text" class="form-control casds" id="end" name='endereco' >
             </div>
 
             <div>
                 <label for="numb">Número</label>
-                <input type="number" class="form-control casds" name='num_end' placeholder="Número">
+                <input type="number" class="form-control casds" name='num_end' >
             </div>
 
             <div>
                 <label for="bairro">Bairro</label>
-                <input type="text" class="form-control casds" name='bairro' placeholder="Bairro">
+                <input type="text" class="form-control casds" name='bairro' >
             </div>
 
             <div>
                 <label for="estado">Estado</label>
-                <input type="text" class="form-control casds" name='uf' placeholder="Estado">
+                <input type="text" class="form-control casds" name='uf'>
             </div>
 
             <div>
                 <label for="cid">Cidade</label>
-                <input type="text" class="form-control casds" name='cidade' placeholder="Cidade">
+                <input type="text" class="form-control casds" name='cidade' >
             </div>
 
             <div>
                 <label for="cep">CEP</label>
-                <input type="number" class="form-control casds" name='cep' placeholder="CEP">
+                <input type="number" class="form-control casds" name='cep' >
             </div>
 
         </div>
@@ -69,7 +69,7 @@
             <div>
                 <label for="exampleFormControlInput1">Email</label>
                 <input type="email" class="form-control casds" id="exampleFormControlInput1" name="email"
-                    placeholder="nome@email.com">
+                    >
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -79,12 +79,12 @@
 
             <div>
                 <label for="password">Senha</label>
-                <input type="password" class="form-control casds" name="password" placeholder="senha">
+                <input type="password" class="form-control casds" name="password" >
             </div>
 
             <div>
                 <label for="confirmapassword">Confirmar Senha</label>
-                <input type="password" class="form-control casds" name="confipass" placeholder="confirmar senha">
+                <input type="password" class="form-control casds" name="confipass" >
             </div>
 
             <div class="btn12">

@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
     /* position: relative; */
     overflow-x: hidden;
-  
+
 }
 /* Início Header*/
 
@@ -191,7 +191,7 @@ a:link{
 
 #menuResponsivo{
     display: none;
-} 
+}
 
 /* Criando o Hamburguer - Início*/
 
@@ -277,27 +277,27 @@ a:link{
         text-align: center;
         padding-top: 20px;
         visibility: hidden;
-        transition: all 300ms ease; 
+        transition: all 300ms ease;
     }
-    
+
     #menuResponsivo.show{
         opacity: 1;
         visibility: visible;
         padding-top: 100px;
         background: #fff;
     }
-    
+
     #menuResponsivo li{
         list-style: none;
         position: relative;
         width: 300px;
         margin: auto;
     }
-    
+
     #menuResponsivo li:hover{
         letter-spacing: 4px;
     }
-    
+
     #menuResponsivo li a{
         color: white;
         display: block;
@@ -307,7 +307,7 @@ a:link{
         position: relative;
         transition: all 300ms;
     }
-    
+
     #menuResponsivo li a:before{
         content: '';
         position: absolute;
@@ -324,22 +324,22 @@ a:link{
         transform: scale(0);
         transition: all 300ms;
     }
-    
+
     #menuResponsivo li a:hover:before{
         opacity: 1;
         transform: scale(1);
     }
 
-    .subItemMenu{ 
-        display: none; 
+    .subItemMenu{
+        display: none;
     }
-   
+
     #menuResponsivo li:hover ul{
         display: block;
-    } 
-   
-   .subItemMenu li:hover ul{ 
-       display: block; 
+    }
+
+   .subItemMenu li:hover ul{
+       display: block;
     }
     /*Menu Responsivo Fim*/
 
@@ -367,11 +367,66 @@ a:link{
 }
 
 /* Carrossel Início*/
+    /* show 3 items*/
+    .card-carousel-inner .card-active,
+    .card-carousel-inner .card-active + .card-carousel-item,
+    .card-carousel-inner .card-active + .card-carousel-item + .card-carousel-item {
+      display: block;
+    }
 
+    .card-carousel-inner .card-carousel-item.card-active:not(.card-carousel-item-right):not(.card-carousel-item-left),
+    .card-carousel-inner .card-carousel-item.card-active:not(.card-carousel-item-right):not(.card-carousel-item-left) + .card-carousel-item,
+    .card-carousel-inner .card-carousel-item.card-active:not(.card-carousel-item-right):not(.card-carousel-item-left) + .card-carousel-item + .card-carousel-item {
+      transition: none;
+    }
+
+    .card-carousel-inner .card-carousel-item-next,
+    .card-carousel-inner .card-carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .card-carousel-inner .card-active.card-carousel-item + .card-carousel-item + .card-carousel-item + .card-carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.3333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+
+    /* left or forward direction */
+    .card-carousel-item-left {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .card-carousel-inner .card-carousel-item-prev.card-carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+
+    /* right or prev direction */
+    .card-active.card-carousel-item-right + .card-carousel-item-prev.card-carousel-item-right,
+    .card-carousel-item-prev.card-carousel-item-right + .card-carousel-item,
+    .card-carousel-item-prev.card-carousel-item-right + .card-carousel-item + .card-carousel-item,
+    .card-carousel-item-prev.card-carousel-item-right + .card-carousel-item + .card-carousel-item + .card-carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+    }
 
  /* Bootstrap Lightbox using Modal */
 
-#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid { overflow: auto; white-space: normal; }
 #profile-grid .profile { padding-bottom: 40px; }
 #profile-grid .panel { padding: 0 }
 #profile-grid .panel-body { padding: 15px }
@@ -379,7 +434,7 @@ a:link{
 #profile-grid .thumbnail {margin-bottom:6px;}
 #profile-grid .panel-thumbnail { overflow: hidden; }
 #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
-    
+
 /* Carrossel End */
         /* Page Departamentos END */
 
@@ -410,56 +465,25 @@ a:link{
     border: 4px solid #4fc4be;
     border-radius: 10px;
     background-color: white;
-    
+
 }
 
 /* form cadastro end */
 
+/* categoria */
 
-/* pagina sobre begin */
-
-.sobre-conteudo.sobre-imagem {
-    height: 40%;
+.categoria.cards{
     margin-top: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    background-image: url(../img/3rs-590x245.jpg);
-    background-size: cover;
-  }
-  
-  .sobre-conteudo .sobre-controle {
-    background-color: #fff;
-    padding: 3%;
-    display: flex;
-    justify-content: center;
-    background-image: url()
-  }
-  
-  .sobre-conteudo .sobre-controle video {
-    width: 80%;
-    height: 60vh;
-    object-fit: cover;
-  }
- 
-  
-  .sobre-conteudo .sobre-controle article {
-    width: 60%;
-    display: flex;
-    padding: 3%;
-    justify-content: space-around;
-  }
-  
-  .sobre-conteudo .sobre-controle p {
-    margin-top: 1%;
-    text-align: justify;
-  }
- .textovideo{
-     font-size: 16px;
- }
+}
 
-/* pagina sobre end */
+h1.text-center.mb-3{
+    margin-top: 5%;
+}
+
+.card.categ{
+    background: none;
+    text-align: center;
+}
 
 /* produto  begin*/
 
@@ -494,7 +518,7 @@ a:link{
 
 .img1{
     margin: 17px;
-    
+
 }
 .img2{
     margin: 15px;
@@ -507,7 +531,7 @@ a:link{
 
 .videomd{
     align-self: center;
-    
+
 }
 
 
@@ -515,7 +539,7 @@ a:link{
 
 .name-info{
     margin: 0px;
-   
+
 }
 .quant{
     margin: 10px;
@@ -526,8 +550,8 @@ a:link{
     color: white;
     border-color: transparent;
     background-color: #17a2b8;
-    
-    
+
+
 }
 .card-text{
     text-align: center;
@@ -547,21 +571,21 @@ a:link{
    margin: 10px;
 }
 .arm{
-    margin-top:20px; 
+    margin-top:20px;
 }
 
 .btn12{
     margin-top: 10px;
-    
+
 }
 
 .zoom:hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
- 
+
  .zoem:hover{
      transform: scale(1.4);
- } 
+ }
 
 /* Imagem  produtos modal  */
 
@@ -569,7 +593,7 @@ a:link{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
-  
+
   /* Modal Content (Image) */
   .modal-content {
     margin: auto;
@@ -577,7 +601,7 @@ a:link{
     width: 80%;
     max-width: 700px;
   }
-  
+
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
   #caption {
     margin: auto;
@@ -589,18 +613,18 @@ a:link{
     padding: 10px 0;
     height: 150px;
   }
-  
+
   /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption { 
+  .modal-content, #caption {
     animation-name: zoom;
     animation-duration: 0.6s;
   }
-  
+
   @keyframes zoom {
-    from {transform:scale(0)} 
+    from {transform:scale(0)}
     to {transform:scale(1)}
   }
-  
+
   /* The Close Button */
   .close {
     position: absolute;
@@ -611,14 +635,14 @@ a:link{
     font-weight: bold;
     transition: 0.3s;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
@@ -650,26 +674,35 @@ footer{
     width: 100%;
     left: 0%;
     background-color: rgba(70, 166, 94,0.7);
-  
+
 }
 
 footer .ftr{
     bottom: 0px;
     width: 100%;
     height: 90px;
-    
     color: rgb(3, 38, 16);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2% 0% 0% 0%;
 }
+.section-footer{
+    display: flex;
+    justify-content: space-around;
 
+}
+.imagem-ftr{
+    align-self: flex-end;
+}
+.imagemLogo{
+    padding-left:50px;
+}
+.item-f{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #listaRedeSocial {
     list-style: none;
     width: 100%;
-    
     display: flex;
     justify-content: space-between;
 }
@@ -721,7 +754,7 @@ footer .ftr{
     }
     #containerMeio img{
         max-width: 80%;
-    }    
+    }
     #containerSearch{
         padding-right: 0px;
         padding-left: 0px;
@@ -730,28 +763,28 @@ footer .ftr{
     #containerSearch form button i {
         font-size: 1em;
     }
-    
+
     #containerSearch form input::-moz-placeholder {
         max-height: 5%;
-        size: 20%;  
+        size: 20%;
         font-size: 1em;
         border-color: #4fc4be;
         border-radius: 5%;
         text-align: center;
-    } 
-    
+    }
+
     .thumbnail img {
         max-width: 250px;
     }
-    
+
     #buttonLogin{
         font-size: 0.7em;
     }
 
     #menuEnd{
         flex-flow: row wrap;
-    }   
-} 
+    }
+}
 
 /*========================================================
     Template - Quando estiver Logado

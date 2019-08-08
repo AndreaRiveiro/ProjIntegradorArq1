@@ -4,14 +4,14 @@
 
 <h1>Cadastro de Produto no Catálogo</h1>
 
-<form action="/cadastroProduto" method="post">
+<form action="/cadastroProduto" method="post" enctype="multipart/form-data">
 @csrf
 
 <section class="container">
 
 <div class="card cadastro-conteudo col-md-8">
         <div class="form-group" >
-        
+
             <div>
                 <label>Nome do Produto</label>
                 <input type="text" class="form-control casds" name="nomeProduto">
@@ -23,7 +23,7 @@
                 <input type="number" class="form-control casds" name="codigoProduto">
                 <label>Categoria</label>
                 <input type="text" class="form-control casds" name="codigoCategoria">
-            </div>   
+            </div>
             <div>
                 <label>Quantidade em Estoque</label>
                 <input type="number" class="form-control casds" name="quantidadeEstoque">
@@ -58,7 +58,7 @@
                 <img src="" alt="">
                 <img src="" alt="">
                 <img src="" alt="">
-                <input type="hidden" name="imagens" value="">
+
             </div>
 
 
@@ -69,19 +69,19 @@
 </form>
 
 
-       
 
-        
+
+
 
 
 @if(isset($resultado))
 
     @if($resultado)
-    
+
         <h1>Cadastro Concluido!</h1>
     @else
         <h1>Erro ao tentar cadastrar!</h1>
-    @endif    
+    @endif
 
 @endif
 

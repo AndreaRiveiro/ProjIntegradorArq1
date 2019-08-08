@@ -12,22 +12,23 @@ class CriarCategoria extends Seeder
      */
     public function run()
     {
-        {
+
             $alimentos = new Categoria();
-            $alimentos->idCategoria = "Alimentos";
             $alimentos->tipo_categoria = "Alimentos";
             $alimentos->descricao = "Alimentos bons";
             $alimentos->save();
 
-        }
-
-        {
             $beleza = new Categoria();
-            $beleza->idCategoria = "Beleza";
             $beleza->tipo_categoria = "Beleza";
             $beleza->descricao = "Produtos Bons";
             $beleza->save();
 
-        }
+            $casa = new Categoria();
+            $casa->tipo_categoria = "Casa Mesa e Banho";
+            $casa->descricao = "Produtos Casa";
+            $casa->save();
+
+
+
     }
 }
