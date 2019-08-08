@@ -51,7 +51,7 @@
                             </a>
                         </div>
                     @endguest
-                    
+
                     @auth
                     <div id="containerLogado">
                         <p id="primNome">
@@ -83,19 +83,9 @@
                     </div>
                     @endauth
 
-<<<<<<< HEAD
-                    {{-- <div class="d-flex align-items-center w-25"> --}}
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/carrinho/exibir"><img src="/img/carrinho2.png" alt=""><span class="sr-only"></span></a>
-                            <span class="badge badge-light"></span>
-                        </li>
-{{--
-                    </div> --}}
-=======
                     <div class="d-flex align-items-center w-25">
                         <a id="fafaCar" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho" class="w-125"></a>
                     </div>
->>>>>>> c1be96041a457514711658bdcf739b62f9f7b056
                 </div>
             </nav>
             <nav id="navBase" class="container-fluid">
