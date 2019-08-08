@@ -380,6 +380,7 @@ class ComposerStaticInitf2e388eab17538cad56d9186dc1a5bda
     );
 
     public static $classMap = array (
+        'AdminSeed' => __DIR__ . '/../..' . '/database/seeds/AdminSeed.php',
         'App\\Carrinho' => __DIR__ . '/../..' . '/app/Carrinho.php',
         'App\\Categoria' => __DIR__ . '/../..' . '/app/Categoria.php',
         'App\\Cliente' => __DIR__ . '/../..' . '/app/Cliente.php',
@@ -406,6 +407,7 @@ class ComposerStaticInitf2e388eab17538cad56d9186dc1a5bda
         'App\\Http\\Controllers\\passwordController' => __DIR__ . '/../..' . '/app/Http/Controllers/passwordController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
+        'App\\Http\\Middleware\\ChecarAdmin' => __DIR__ . '/../..' . '/app/Http/Middleware/ChecarAdmin.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

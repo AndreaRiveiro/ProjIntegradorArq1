@@ -29,13 +29,8 @@
             </div>
 
         </div>
-    </form>
-
-
-    <form method="POST"action="/cadastro">
         <!-- Informações Endereço -->
         <div class="form-group">
-
             <div>
                 <label for="endereco">Endereço</label>
                 <input type="text" class="form-control casds" id="end" name='endereco' >
@@ -67,10 +62,6 @@
             </div>
 
         </div>
-
-    </form>
-
-    <form method="POST"  action="/cadastro">
         <!-- Informações de Login -->
 
         <div class="form-group" >
@@ -98,7 +89,7 @@
 
             <div class="btn12">
                 <button id="bt_submit" type="submit" name='cadastro' class="btn btn-primary btn-casds">Enviar</button>
-                <input type="reset" value="Limpar" class="btn btn-primary">
+                <input type="reset" value="Limpar" class="btn">
             </div>
         </div>
 

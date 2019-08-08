@@ -51,18 +51,17 @@
                             </a>
                         </div>
                     @endguest
-
+                    
                     @auth
                     <div id="containerLogado">
                         <p id="primNome">
                             <a class="btn btn-primary btn-outline-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                               Olá, {{ auth()->user()->prim_nome}}
+                               Olá, {{ Auth::user()->prim_nome}}
                             </a>
-                        </p>
-                        <div class="collapse" id="collapseExample">
+                            <div class="collapse" id="collapseExample">
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">
-                                    <a href="/editarCadastro/{{auth()->user()->id}}">
+                                    <a href="/editarCadastro/{{Auth::user()->id}}">
                                         <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
                                             <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
                                         </button>
@@ -73,9 +72,18 @@
                                 </a>
                             </div>
                         </div>
+                        </p>
+                        @if(Auth::user()->nivel_user ==0)
+                        <a id="btnEditarAdmin" href="/index">
+                            <button id="btnEditarAdmin" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#000505">
+                                Admin
+                            </button>
+                        </a>
+                        @endif
                     </div>
                     @endauth
 
+<<<<<<< HEAD
                     {{-- <div class="d-flex align-items-center w-25"> --}}
                         <li class="nav-item active">
                             <a class="nav-link" href="/carrinho/exibir"><img src="/img/carrinho2.png" alt=""><span class="sr-only"></span></a>
@@ -83,6 +91,11 @@
                         </li>
 {{--
                     </div> --}}
+=======
+                    <div class="d-flex align-items-center w-25">
+                        <a id="fafaCar" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho" class="w-125"></a>
+                    </div>
+>>>>>>> c1be96041a457514711658bdcf739b62f9f7b056
                 </div>
             </nav>
             <nav id="navBase" class="container-fluid">
