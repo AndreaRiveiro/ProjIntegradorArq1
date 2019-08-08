@@ -429,20 +429,7 @@ body {
 
 /* form cadastro end */
 
-/* categoria */
 
-.categoria.cards{
-    margin-top: 3%;
-}
-
-h1.text-center.mb-3{
-    margin-top: 5%;
-}
-
-.card.categ{
-    background: none;
-    text-align: center;
-}
 
 /* produto  begin*/
 
@@ -659,12 +646,6 @@ footer .ftr{
     align-items: center;
 }
 
-#listaRedeSocial {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
 /* .fot{
     display: flex;
 }
@@ -674,28 +655,136 @@ footer .ftr{
 } */
 /* footer end */
 
-
-/*****Page Carrinho Início *****/
-
-#cabecalho{
-    display: grid;
-    flex-direction: row;
-    justify-content: space-around;
+.jumbotron.text-center{
+    margin-top: 10%;
+}
+.form-pedido{
+    margin-bottom: 10%;
 }
 
-#produto{
-    display: grid;
-    flex-direction: column;
-    justify-content: space-around;
+
+/* pagina principal */
+
+
+
+.categoria.cards{
+    margin-top: 3%;
 }
 
-#descProduto{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+h1.text-center.mb-3{
+    margin-top: 5%;
 }
 
-/*****Page Carrinho FIM *****/
+.card.categ{
+    background-color: none;
+    text-align: center;
+}
+
+
+.categoria-card1 {
+    background-color:rgba(70, 166, 94,0.7);
+    color: #fff;
+    padding: 0.3em 1.2em;
+    border: 0;
+}
+
+.categ-prod{
+    background-color: none;
+    text-align: center;
+}
+
+.categoria-card2 {
+    background-color:rgba(62, 65, 65, 0.76);
+    padding: 0.3em 1.2em;
+    border: 0;
+}
+
+button a{
+    color: #fff;
+}
+
+.categoria-comprar{
+    background-color:rgba(70, 166, 94,0.7);
+    color: #fff;
+    padding: 0.3em 1.2em;
+    border: 0;
+}
+h4.card-title.card2{
+    color: black;
+    text-align: center;
+}
+
+.cardprodcateg{
+    background: none;
+}
+
+h1.mecanismo-busca{
+    margin-top: 4%;
+}
+
+.card-busca{
+    background-color: none;
+    text-align: center;
+}
+
+div.cardbuscas{
+    margin-top: 3%;
+    margin-right: 2%;
+}
+/* .busca-pag{
+
+} */
+/* principal end  */
+
+/* categoria pagina  */
+
+.prodr-categoria-vizualizacao{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.nomescteg{
+    margin-top: 4%;
+}
+
+.card-categoriasgerais{
+    text-align: center;
+
+}
+
+.prod-categoria{
+    background-color:rgba(70, 166, 94,0.7);
+    color: #fff;
+    padding: 0.3em 1.2em;
+    border: 0;
+}
+
+button a{
+    color: #fff;
+}
+
+div.card.produtos-categoria{
+    border: none;
+    background: none;
+}
+
+/* carrinho pagina  */
+
+.img-tamanho{
+    width:100px;
+}
+
+.hidden{
+    display: none;
+}
+
+.jumbotron.text-center {
+    margin-top: 6%;
+}
+
+
+/* //////////////////////////////////////////////////////// */
+
+
 @media (max-width: 768px){
     #menuBase{
         display: none;

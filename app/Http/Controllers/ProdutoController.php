@@ -4,12 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Categoria;
 
 class ProdutoController extends Controller
 {
-    public function index()
+    public function index(Request $request,$id)
     {
-        return view('produto');
+
+        $produto = Produto::find($id);
+        $categoria = $produto->codigo_categoria;
+        // $categoria = Categoria::find($categoria);
+        // $categoria = $categoria->tipo_categoria;
+        $produtos = Produto::where('codigo_categoria', "=", "$categoria")->get();
+        return view('produto',["produto"=>$produto,"produtos"=>$produtos]);
+    }
+
+    public function busca(Request $request){
+
+        $search = $request->search;
+        if($search == ""){
+            return redirect('/principal');
+        }
+        $mecanismo = Produto::where('nome_produto', 'LIKE', '%'.$search.'%')->get();
+        return view('busca',['mecanismo'=>$mecanismo]);
     }
 
     public function produtosgerais(Request $request)

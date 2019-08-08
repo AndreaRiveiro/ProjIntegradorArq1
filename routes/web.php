@@ -43,7 +43,7 @@ Route::get('/password','passwordController@index');
 // Rotas Produto
 Route::get('/produtosGerais','ProdutoController@produtosgerais')->name('produtosGerais');
 
-Route::get('/produto', 'ProdutoController@index');
+Route::get('/produto/{id}', 'ProdutoController@index');
 
 Route::get('/cadastroProduto','ProdutoController@create');
 Route::post('/cadastroProduto', 'ProdutoController@create');
@@ -68,6 +68,10 @@ Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 // Route Categoria
 
 Route::get('/categoria/{id?}','CategoriaController@index');
+
+// Busca
+
+Route::post('/busca','ProdutoController@busca');
 
 
 /* Logout */

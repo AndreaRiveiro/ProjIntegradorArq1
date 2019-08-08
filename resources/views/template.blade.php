@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Latest updates and statistic charts">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/style.css')}}" >
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/contato.css')}}">
@@ -25,10 +29,13 @@
                     <a href="/principal"><img src="/img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
                 </div>
                 <div id="containerSearch" class="container-fluid justify-content-around col-5">
-                    <form action="" method="GET">
-                        <input type="search" name="buscah" size="24" placeholder="  O que você está procurando">
-                        <button type="submit">
+                    <form action="/busca" method="POSt" role="search" >
+                        @csrf
+                        <input type="search" name="search" size="24" placeholder="  O que você está procurando">
+                        <button type="submit" class="btn btn-default">
                             <i class="fa fa-search"></i>
+                                    {{-- <span class="glyphicon glyphicon-search"></span> --}}
+
                         </button>
                     </form>
                 </div>
@@ -69,9 +76,13 @@
                     </div>
                     @endauth
 
-                    <div class="d-flex align-items-center w-25">
-                        <a class="fafaCar" href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
-                    </div>
+                    {{-- <div class="d-flex align-items-center w-25"> --}}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/carrinho/exibir"><img src="/img/carrinho2.png" alt=""><span class="sr-only"></span></a>
+                            <span class="badge badge-light"></span>
+                        </li>
+{{--
+                    </div> --}}
                 </div>
             </nav>
             <nav id="navBase" class="container-fluid">
@@ -142,18 +153,21 @@
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                        <img src="/img/banner-principal-mesustenta.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                </div>
+                <div class="carousel-item">
                     <img src="/img/banner2.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h3></h3>
                         <p></p>
-                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
-                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
-                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/bandeira">Bandeira vetor criado por vectorpouch - br.freepik.com</a> -->
-                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/papel">Papel foto criado por freepik - br.freepik.com</a> -->
-                        <!-- <a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo foto criado por freepik - br.freepik.com</a> -->
                     </div>
                 </div>
                 <div class="carousel-item">

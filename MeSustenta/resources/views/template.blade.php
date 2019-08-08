@@ -26,8 +26,8 @@
                     <a href="/principal"><img src="/img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
                 </div>
                 <div id="containerSearch" class="container-fluid justify-content-around col-5">
-                    <form action="" method="GET">
-                        <input type="search" name="buscah" size="24" placeholder="  O que você está procurando">
+                    <form action="/search" method="GET" role="search">
+                        <input type="search" name="q" size="24" placeholder="  O que você está procurando">
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>

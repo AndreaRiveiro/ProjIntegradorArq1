@@ -4,7 +4,7 @@
 <section>
 <div class="container-fluid">
     <div class="row">
-        <div class= "col-3">
+        <div class= "col-3 nomescteg">
             <h2>Categorias</h2>
                 <ul>
                    @foreach ($categorias as $categoria)
@@ -13,16 +13,17 @@
                    <li><a href="/categoria">Todos os produtos</a></li>
                 </ul>
         </div>
-        <div class="col-9">
-            <h3>Nomes</h3>
 
-            <div class="card-deck">
+        <div class="col-9">
+
+            <div class="card-deck prodr-categoria-vizualizacao">
                 @foreach ($produtos as $produto)
-                <div class="card">
+                <div class="card produtos-categoria">
                 <img src="{{url("$produto->imagens")}}" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="card-categoriasgerais">
                         <h5 class="card-title">{{$produto->nome_produto}}</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"></p>
+                        <button class="btn btn-sucess prod-categoria"><a href="/produto/{{$produto->idProduto}}">+Detalhes</a></button>
                         </div>
                     </div>
 

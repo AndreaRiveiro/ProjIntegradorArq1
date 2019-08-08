@@ -1,5 +1,5 @@
   /* form contato begin */
-/* 
+/*
 .contato-content {
     margin: 8%;
     width: 40%;
@@ -53,6 +53,13 @@ h1#contatonome{
     height: 40%;
 }
 
+#coloracao{
+    background-color: grey;
+}
 
+
+div.espaco{
+    margin: 2%;
+}
 
 
