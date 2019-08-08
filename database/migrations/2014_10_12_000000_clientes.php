@@ -17,7 +17,7 @@ class Clientes extends Migration
             $table->bigIncrements('id');
             $table->string("prim_nome");
             $table->string("ult_nome");
-            $table->date('data_nasc');
+            $table->date('data_nasc')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -27,8 +27,8 @@ class Clientes extends Migration
             $table->string('uf');
             $table->string("cidade");
             $table->integer('cep');
-            $table->bigInteger('rg');
-            $table->bigInteger("cpf")->unique();
+            $table->bigInteger('rg')->nullable();
+            $table->bigInteger("cpf")->nullable();
             $table->bigInteger("cliente_status");
             $table->rememberToken();
             $table->timestamps();

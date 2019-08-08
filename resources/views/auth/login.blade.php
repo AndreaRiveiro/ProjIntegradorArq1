@@ -1,4 +1,4 @@
-<button onclick="document.getElementById('id01').style.display='block'" class=" btn btn-defult" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
+<button id="btnLogin" onclick="document.getElementById('id01').style.display='block'" class=" btn btnEditarAdmin btn btn-outline-info" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
     <div class="card-header" hidden>{{ __('Login') }}</div>
     <div id="id01" class="modal">
         <form class="modal-content animate" method="POST" action="{{ route('login') }}">

@@ -44,18 +44,26 @@
                             </a>
                         </div>
                     @endguest
-
+                    
                     @auth
                     <div id="containerLogado">
                         <p id="primNome">
                             <a class="btn btn-primary btn-outline-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                               Olá, {{ auth()->user()->prim_nome}}
+                               Olá, {{ Auth::user()->prim_nome}}
                             </a>
                         </p>
+
+                     @if(Auth::user()->nivel_user ==1)
+                    <a class="btnEditarAdmin" href="/cadastroAdmi">
+                        <button id="btnEditarAdmin" type="button" class="btnEditarAdmin btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
+                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Admin
+                        </button>
+                    </a>
+                    @endif
                         <div class="collapse" id="collapseExample">
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">
-                                    <a href="/editarCadastro/{{auth()->user()->id}}">
+                                    <a href="/editarCadastro/{{Auth::user()->id}}">
                                         <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
                                             <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
                                         </button>

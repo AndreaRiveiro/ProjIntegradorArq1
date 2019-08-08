@@ -98,6 +98,47 @@ body {
     z-index: 10;
 }
 
+#btnLogin{
+    border-color: rgba(70, 166, 94,0.7);
+    color: black;
+}
+
+#btnLogin:hover{
+    background: rgba(70, 166, 94,0.7);
+    text-decoration: none;
+}
+
+#btnEditarAdmin{
+    border-color: rgba(70, 166, 94,0.7);
+}
+
+#btnEditarAdmin:hover{
+    background: rgba(70, 166, 94,0.7);
+    text-decoration: none;
+}
+
+#btnEditarCd{
+    border-color: rgba(70, 166, 94,0.7);
+}
+
+#btnEditarCd:hover{
+    background: rgba(70, 166, 94,0.7);
+    text-decoration: none;
+}
+
+#buttonLogout{
+    border-color: rgba(70, 166, 94,0.7);
+}
+
+#buttonLogout:hover{
+    background: rgba(70, 166, 94,0.7);
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
 #cadastrar{
     padding: 0;
     justify-content: center;

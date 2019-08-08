@@ -53,7 +53,10 @@ Route::get('/produto/editar/{id}',"ProdutoController@editar");
 Route::post('/produto/editar/{id}',"ProdutoController@editar");
 
 // Route::deletar('/produto/excluir','PedidoController@excluir');
+Route::get('/index',function(){
 
+    return view('index');
+});
 
 // Routes Pedido + Carrinho
     Route::get('/carrinho','CarrinhoController@exibir');
