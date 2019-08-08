@@ -51,16 +51,7 @@
                             <a class="btn btn-primary btn-outline-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                Olá, {{ Auth::user()->prim_nome}}
                             </a>
-                        </p>
-
-                     @if(Auth::user()->nivel_user ==1)
-                    <a class="btnEditarAdmin" href="/cadastroAdmi">
-                        <button id="btnEditarAdmin" type="button" class="btnEditarAdmin btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Admin
-                        </button>
-                    </a>
-                    @endif
-                        <div class="collapse" id="collapseExample">
+                            <div class="collapse" id="collapseExample">
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">
                                     <a href="/editarCadastro/{{Auth::user()->id}}">
@@ -74,11 +65,19 @@
                                 </a>
                             </div>
                         </div>
+                        </p>
+                        @if(Auth::user()->nivel_user ==0)
+                        <a id="btnEditarAdmin" href="/index">
+                            <button id="btnEditarAdmin" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#000505">
+                                Admin
+                            </button>
+                        </a>
+                        @endif
                     </div>
                     @endauth
 
                     <div class="d-flex align-items-center w-25">
-                        <a class="fafaCar" href="/carrinho/exibir"><i class="fa fa-cart-plus fafaCar"></i></a>
+                        <a id="fafaCar" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho" class="w-125"></a>
                     </div>
                 </div>
             </nav>

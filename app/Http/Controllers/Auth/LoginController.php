@@ -21,7 +21,7 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+  protected $redirectTo = '/principal';
     /**
      * Where to redirect users after login.
      *

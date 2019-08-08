@@ -11,15 +11,24 @@
 |
 */
 Auth::routes();
+// Rotas Admin - início
+Route::get('/index',function(){
+    return view('index');
+})->middleware('checkadmin');
+
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+// Rotas Admin - Fim
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-    return view('template');
+    return view('principal');
 });
 
 Route::get('/teste', function() {
-    return view('welcome');
+    return view('test');
 });
 
 
