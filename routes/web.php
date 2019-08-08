@@ -75,7 +75,7 @@ Route::get('/carrinho/exibir', 'CarrinhoController@exibir');
 Route::get('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 
-// Route::deletar('/carrinho/remover','PedidoController@remover');
+ Route::get('/carrinho/remover/{id}','CarrinhoController@remover');
 
 // Route Categoria
 

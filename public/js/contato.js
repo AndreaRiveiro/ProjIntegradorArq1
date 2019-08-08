@@ -25,26 +25,26 @@
         }
 
 
-        let formulariocontato = document.querySelector("#form-parceiro");
-        let variaveiscontato = document.querySelectorAll(".parceiro");
-        let destinarcontato = document.querySelector("btn-parceiro");
+        let formularioParceiro = document.querySelector("#form-parceiro");
+        let parceiroContato = document.querySelectorAll(".parceiro");
+        let destinarParceiros = document.querySelector("btn-parceiro");
 
 
-        formulariocontato.onsubmit = function (event) {
+        formularioParceiro.onsubmit = function (event) {
 
             event.preventDefault();
-            numeroEnviado = 0;
-            for (input of variaveiscontato) {
+            numerbsSent = 0;
+            for (input of parceiroContato) {
                 if (input.value == "") {
                     input.style.border = "1px solid red";
                     input.setAttribute("placeholder", "Preencha os dados corretamente");
                 } else {
                     input.style.border = "1px solid #ccc";
-                    numeroEnviado++;
+                    numerbsSent++;
                 }
             }
 
-            if (numeroEnviado == variaveiscontato.length) {
+            if (numerbsSent == parceiroContato.length) {
                 document.getElementById('formul-parceiro').submit();
             }
 

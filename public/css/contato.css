@@ -25,9 +25,7 @@
      padding: 10%;
 
 }
-.botao{
-    margin-top: 2px;
-}
+
 
 h1#contatonome{
     margin-top: 90px;
@@ -44,6 +42,14 @@ h1#contatonome{
 .mkrt{
     margin-top: 2%;
 } */
+
+textarea.form-control.conts{
+    margin-bottom: 2%;
+}
+
+textarea.form-control.parceiro{
+    margin-bottom: 2%;
+}
 
 /* form contato end */
 

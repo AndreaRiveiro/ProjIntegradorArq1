@@ -210,43 +210,43 @@
     <div class="row section-footer">
         <div class="col-md-6 col-lg-3 item-f">
             <h5 class="text">MeSustenta</h5>
-            <p>Por uma vida mais sustentavél e natural.</p>
+            <p>Por uma vida mais sustentavel e natural.</p>
 
             <label> Copyright © 2019 | MeSustenta </label>
         </div>
         <hr class="clearfix w-100 d-md-none pb-3">
         <div class="col-md-3 mb-md-0 mb-3 col-lg-3 ">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase nomes">Links</h5>
             <ul class="list-unstyled item-f">
                 <li>
-                <a href="/sobre">Nosso Objetivo</a>
+                <a class="ftr-nomes" href="/sobre">Nosso Objetivo</a>
                 </li>
                 <li>
-                <a href="/sobre">Quem somos</a>
+                <a class="ftr-nomes" href="/sobre">Quem somos</a>
                 </li>
                 <li>
-                <a href="/contato">Contato</a>
+                <a class="ftr-nomes" href="/contato">Contato</a>
                 </li>
 
             </ul>
         </div>
 
         <div class="col-md-3 mb-md-0 mb-3 col-lg-3  ">
-            <h5 class="text-uppercase">Links</h5>
+            <h5 class="text-uppercase nomes">Links</h5>
             <ul class="list-unstyled item-f">
                 <li>
-                <a href="/principal">Home</a>
+                <a class="ftr-nomes" href="/principal">Home</a>
                 </li>
                 <li>
-                <a href="/categoria">Categorias</a>
+                <a class="ftr-nomes" href="/categoria">Categorias</a>
                 </li>
                 <li>
-                <a href="#!">Termos de Uso</a>
+                <a class="ftr-nomes" href="#!">Termos de Uso</a>
                 </li>
             </ul>
         </div>
         <div class="col-lg-3 imagem-ftr">
-                <img src="/img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
+                <img class="testando" src="/img/logoMeSustenta.png" alt="Logo" class="imagemlogo">
         </div>
     </div>
     </div>
