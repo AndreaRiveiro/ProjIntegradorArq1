@@ -18,7 +18,8 @@ body {
 }
 
 #navTopo {
-    margin: 1% 4% 0% 4%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 100vw;
     justify-content: space-between;
     align-items: flex-start;
@@ -96,17 +97,20 @@ body {
 
 #divRightLineTwo{
     z-index: 10;
+    height: 50px;
 }
 
-#containerLogado{
+/* #containerLogado{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
+    
+    
+    align-itens: center;
+} */
 
 #btnLogin{
     border-color: rgba(70, 166, 94,0.7);
     color: black;
+    max-height: 8vh;
 }
 
 #btnLogin:hover{
@@ -140,6 +144,7 @@ body {
 
 #btnEditarAdmin{
     text-decoration: none;
+    max-height: 6vh;
 }
 
 #cadastrar{
@@ -147,14 +152,31 @@ body {
     justify-content: center;
 }
 
-#fafaCar{
-   width: 100%;
-}
 #fafaCar img{
-   width: 60%;
+    width: 2.4vw;
+ }
+
+#fafaCarLogado img{
+   width: 3vw;
 }
+#menu-edit-admin{
+    position:absolute;
+    width: 35%;
+}
+
+#containerLogin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
 #navBase {
     background: rgba(70, 166, 94,0.7);
+}
+
+#menuCategoria{
+    color: black;
 }
 
 #menuBase {
@@ -164,8 +186,9 @@ body {
     align-items: center;
 }
 
-.subMenu {
-    border: none;
+#subMenu {
+    border:rgba(70, 166, 94,0.7);
+    margin: -0.1vh;
 }
 
 .tituloMenu {
@@ -176,7 +199,7 @@ body {
 .subTitulo {
     font-size: 0.9em;
     font-style: bold;
-    color: #2655c2;
+    color:black;
 }
 
 #listaLojas {
@@ -452,9 +475,6 @@ body {
     margin-bottom: 8%;
 }
 
-
-
-
 /* form contato end */
 
 /* form cadastro begin */
@@ -505,8 +525,6 @@ h1.text-center.mb-3{
     align-self: center;
 }
 
-
-
 /* card imagens end */
 
 /* imagem logo */
@@ -514,8 +532,6 @@ h1.text-center.mb-3{
     width: 40%;
     height: 40%;
 }
-
-
 
 /* imagem */
 
@@ -537,7 +553,6 @@ h1.text-center.mb-3{
 
 }
 
-
 /* info */
 
 .name-info{
@@ -553,7 +568,6 @@ h1.text-center.mb-3{
     color: white;
     border-color: transparent;
     background-color: #17a2b8;
-
 
 }
 .card-text{
@@ -652,8 +666,6 @@ h1.text-center.mb-3{
       width: 100%;
     }
   }
-
-
 /* imagem modal end */
 
 /* img produtos */

@@ -134,6 +134,6 @@ class RegisterController extends Controller
          $novoCliente->nivel_user = 1;
          $novoCliente->cliente_status = 1;
          $novoCliente->save();
-         return $redirectTo;
+         return $redirect("/principal");
      }
 }
