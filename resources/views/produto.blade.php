@@ -35,7 +35,7 @@
         </div>
         <div class="row">
           <div class="btn2">
-          <button type="submit" class="btn btn-primary rounded-pill btnn "><a href="/carrinho/adicionar/{{$produto->idProduto}}">Adicionar ao Carinho</a></button>
+          <button type="submit" class="btn btn-success rounded-pill btnn "><a href="/carrinho/adicionar/{{$produto->idProduto}}">Adicionar ao Carinho</a></button>
           </div>
          </div>
        </form>
@@ -70,16 +70,19 @@
 <div class="container-imagem mt-5 rodape">
 
 
-    <div class="row justify-content-center">
+    <div class="row justify-content-center bc">
     <div class="col-lg-12 prod text-center">
-        <h4>Produtos Relacionados</h4>
+        <h3 class="">Produtos Relacionados</h3>
         </div>
             @foreach ($produtos as $filtro)
                 <div class="card imagem col-lg-2 col-sm-12 col-12 imgcard">
-                    <img  src="{{url("$filtro->imagens")}}" class="card-img-top zoom" alt="...">
+                    <img  src="{{url("$filtro->imagens")}}" class="card-img-top zoom imgproduto" alt="...">
                     <div class="card-body">
                     <p class="card-text">{{$filtro->nome_produto}}</p>
-                    </div>
+                </div>
+                <button type="button" class="btn btn-sucess categoria-card2 mt-0 mb-5"><a
+                    href="/produto/{{$produto->idProduto}}">Ver mais</a>
+               </button>
                 </div>
             @endforeach
 

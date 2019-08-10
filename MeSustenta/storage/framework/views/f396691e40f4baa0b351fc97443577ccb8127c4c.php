@@ -1,1 +1,0 @@
-<h1>Oi</h1><?php /**PATH D:\Documentos\Digital House\ProjIntegradorArq1\MeSustenta\resources\views/teste.blade.php ENDPATH**/ ?>

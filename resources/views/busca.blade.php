@@ -6,7 +6,7 @@
 <ul class="row">
 
 
-@foreach ($mecanismo as $busca)
+@forelse ($mecanismo as $busca)
 
     <div class="cardbuscas" style="width: 18rem;">
         <img src="{{url("$busca->imagens")}}" class="card-img-top" alt="...">
@@ -15,9 +15,9 @@
             <button type="submit" class="btn btn-success busca-pag"><a href="/carrinho/adicionar/{{$busca->idProduto}}">Adicionar ao Carinho</a></button>
         </div>
     </div>
-
-
-@endforeach
+@empty
+        <h5 class="font-italic">Não foi encontrado produtos na busca! </h5>
+@endforelse
 </ul>
 
 

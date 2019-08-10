@@ -3,7 +3,7 @@
 @section('container')
 
 
-<form action="/carrinho" method="post" class="form-pedido">
+<form action="/carrinho/finalizarCompra" method="post" class="form-pedido">
 @csrf
 
 
@@ -32,19 +32,20 @@
                             @php
                                 $precoTotal = 0;
                             @endphp
-
                              @forelse($produtos as $produto)
-                                @php
 
-                                @endphp
+                            @php
+                            $precoTotal = $precoTotal + ($produto['qty'] * $produto['preco_venda']);
+                            @endphp
+
                              <tr>
-                            <td><img class="img-tamanho" src="{{$produto->imagens}}" /> </td>
-                                <td class="hidden">{{ $produto->idProduto }}</td>
-                                <td>{{ $produto->nome_produto}}</td>
-                                <td>{{$produto->produto_status}}</td>
-                                <td><input class="form-control" type="text" value="1" /></td>
-                            <td class="text-right">{{$produto->preco_venda}}</td>
-                             <td class="text-right"><a  href="/carrinho/remover/{{$produto->idProduto}}"class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> </td>
+                            <td><img class="img-tamanho-carrinho" src="{{$produto['imagens']}}" /> </td>
+                                <td class="hidden">{{ $produto['product_id'] }}</td>
+                                <td>{{ $produto['nome_produto']}}</td>
+                                <td>{{$produto['produto_status']}}</td>
+                             <td><input class="form-control" type="text" value="{{$produto['qty']}}" /></td>
+                            <td class="text-right">{{$produto['preco_venda']}}</td>
+                             <td class="text-right"><a  href="/carrinho/remover/{{$produto['product_id']}}"class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> </td>
                             @empty
                             <h2>Carrinho vazio</h2>
                         </tr>
@@ -65,8 +66,8 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>Shipping</td>
-                                <td class="text-right">6,90 €</td>
+                                <td>Frete</td>
+                            <td class="text-right">R${{10}}</td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -83,10 +84,10 @@
             <div class="col mb-2">
                 <div class="row">
                     <div class="col-sm-12  col-md-6">
-                        <button class="btn btn-block btn-light">Continue Comprando</button>
+                       <a  class="btn btn-lg btn-block btn-dark"href="/principal">Continue Comprando</a>
                     </div>
                     <div class="col-sm-12 col-md-6 text-right">
-                        <button class="btn btn-lg btn-block btn-success text-uppercase"><a href="/compra/finalizar">Check Out</a></button>
+                        <button class="btn btn-lg btn-block btn-success text-uppercase">Check Out</button>
                     </div>
                 </div>
             </div>

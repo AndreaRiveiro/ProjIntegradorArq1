@@ -15,7 +15,6 @@ class Pagamentos extends Migration
     {
         Schema::create('pagamentos', function (Blueprint $table) {
             $table->bigIncrements('idPagamento');
-            $table->string("formas_pagamento");
             $table->string("tipo_pagamento");
             $table->timestamps();
         });

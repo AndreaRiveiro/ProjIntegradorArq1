@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\CarrinhoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +24,6 @@ Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallb
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', function () {
-    return view('principal');
-});
 
 Route::get('/teste', function() {
     return view('test');
@@ -34,7 +32,8 @@ Route::get('/teste', function() {
 
 // Rotas principais
 
-Route::get('/principal',"PrincipalController@index");
+Route::get('/principal/{login?}',"PrincipalController@index")->name('principal');
+Route::get('/',"PrincipalController@index");
 
 
 // Route::get('/home',"PrincipalController@index");
@@ -76,6 +75,8 @@ Route::get('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 Route::post('/carrinho/adicionar/{id}','CarrinhoController@adicionar');
 
  Route::get('/carrinho/remover/{id}','CarrinhoController@remover');
+ Route::post('/carrinho/finalizarCompra','CarrinhoController@finalizarCompra')->middleware('auth');
+//  Route::post('orders/finalizarCompra', ['as' => 'finalizarCompra', 'uses' => 'OrdersController@finalizarCompra']);
 
 // Route Categoria
 
@@ -92,6 +93,7 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 /* Editar Cadastro Cliente*/
 Route::get('/editarCadastro/{id}','CadastroController@editar')->middleware('auth');
 Route::post('/editarCadastro/{id}','CadastroController@editar')->middleware('auth');
+
 
 
 

@@ -14,20 +14,20 @@ class CriarCategoria extends Seeder
     {
 
             $alimentos = new Categoria();
-            $alimentos->
+            $alimentos->imagensCategoria = "/img/cestaabundancia.jpg";
             $alimentos->tipo_categoria = "Alimentos";
             $alimentos->descricao = "Alimentos bons";
             $alimentos->save();
 
             $beleza = new Categoria();
-            $beleza->
+            $beleza->imagensCategoria = "/img/cosmeticos-naturais.jpg";
             $beleza->tipo_categoria = "Beleza";
             $beleza->descricao = "Produtos Bons";
             $beleza->save();
 
             $casa = new Categoria();
-            $casa->
-            $casa->tipo_categoria = "Casa Mesa e Banho";
+            $casa->imagensCategoria ="/img/honestComp.jpg";
+            $casa->tipo_categoria = "Casa";
             $casa->descricao = "Produtos Casa";
             $casa->save();
 

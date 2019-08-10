@@ -31,7 +31,7 @@
                 <div id="containerSearch" class="container-fluid justify-content-around col-5">
                     <form action="/busca" method="POSt" role="search" >
                         @csrf
-                        <input type="search" name="search" size="24" placeholder="  O que você está procurando">
+                        <input class="buscar" type="search" name="search" size="24" placeholder="  O que você está procurando">
                         <button type="submit" class="btn btn-default">
                             <i class="fa fa-search"></i>
                                     {{-- <span class="glyphicon glyphicon-search"></span> --}}
@@ -42,7 +42,13 @@
                 <div class="row d-flex justify-content-center col-3">
                     @guest
                         <div id="divRightLineTwo" class="col-3">
-                                @include('auth.login')
+                                {{-- @include('auth.login') --}}
+                                <div id="login" class="d-flex align-items-center col-4">
+                                        <a id="addLogin" href="/login" style="font-size:0.6em;color:#000505">
+                                            <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
+                                            Login
+                                        </a>
+                                    </div>
                         </div>
                         <div id="cadastrar" class="d-flex align-items-center col-4">
                             <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
@@ -136,14 +142,14 @@
                         <div class="dropdown-menu subMenu">
                             <a class="dropdown-item subTitulo" href="/categoria/1">Alimentos</a>
                             <a class="dropdown-item subTitulo" href="/categoria/2">Beleza</a>
-                            <a class="dropdown-item subTitulo" href="/categoria/3">Casa, Mesa e Banho</a>
+                            <a class="dropdown-item subTitulo" href="/categoria/3">Casa</a>
 
                         </div>
                     </li>
                     <!--   Final menu de Departamentos -->
                     <li><a class="tituloMenu" href="/categoria/1">Alimentos</a></li>
                     <li><a class="tituloMenu" href="/categoria/2">Beleza</a></li>
-                    <li><a class="tituloMenu" href="/categoria/3">Casa, Mesa e Banho</a></li>
+                    <li><a class="tituloMenu" href="/categoria/3">Casa</a></li>
                 </div>
             </nav>
         </section>
@@ -216,7 +222,7 @@
         </div>
         <hr class="clearfix w-100 d-md-none pb-3">
         <div class="col-md-3 mb-md-0 mb-3 col-lg-3 ">
-            <h5 class="text-uppercase nomes">Links</h5>
+            <h5 class="text-uppercase nomes text-center">Links</h5>
             <ul class="list-unstyled item-f">
                 <li>
                 <a class="ftr-nomes" href="/sobre">Nosso Objetivo</a>
@@ -232,16 +238,16 @@
         </div>
 
         <div class="col-md-3 mb-md-0 mb-3 col-lg-3  ">
-            <h5 class="text-uppercase nomes">Links</h5>
+            <h5 class="text-uppercase nomes text-center">Links</h5>
             <ul class="list-unstyled item-f">
                 <li>
-                <a class="ftr-nomes" href="/principal">Home</a>
+                <a class="ftr-nomes" href="/principal">Termos de Uso</a>
                 </li>
                 <li>
                 <a class="ftr-nomes" href="/categoria">Categorias</a>
                 </li>
                 <li>
-                <a class="ftr-nomes" href="#!">Termos de Uso</a>
+                <a class="ftr-nomes" href="#!">Home</a>
                 </li>
             </ul>
         </div>
@@ -261,7 +267,7 @@
 <!-- Footer -->
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="{{asset('js/script.js')}}"></script>

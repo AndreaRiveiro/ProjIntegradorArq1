@@ -15,11 +15,10 @@ class Compras extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->bigIncrements('idCompra');
-            $table->date("data_compra");
-            $table->date("data_entrega");
-            $table->dateTime("frete");
+            $table->date("data_entrega")->nullable();
+            $table->dateTime("frete")->nullable();
             $table->unsignedBigInteger("fk_idCliente");
-            $table->unsignedBigInteger("fk_idPagamento");
+            $table->unsignedBigInteger("fk_idPagamento")->nullable();
             $table->timestamps();
 
             $table->foreign('fk_idCliente')->references('id')->on('clientes');

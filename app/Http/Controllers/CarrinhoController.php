@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Carrinho;
 use App\Produto;
+use App\Compra;
+use App\Item;
 
 class CarrinhoController extends Controller
 {
@@ -21,9 +24,16 @@ class CarrinhoController extends Controller
 
             $carrinho = $request->session()->get("carrinho");
         $produtos=[];
-
        foreach($carrinho as $item){
-           $produtos[]= Produto::find($item['product_id']);
+
+           $produto = Produto::find($item['product_id']);
+
+            $item['nome_produto'] = $produto->nome_produto;
+            $item['imagens'] = $produto->imagens;
+            $item['produto_status'] = $produto->produto_status;
+            $item['preco_venda'] = $produto->preco_venda;
+            $produtos[] = $item;
+
        }
 
         return view('carrinho',["produtos" => $produtos]);
@@ -41,7 +51,6 @@ class CarrinhoController extends Controller
                 return "produto nao existe";
             }
 
-
             if(!$request->session()->has("carrinho")){
                 $request->session()->put('carrinho', [
                     [
@@ -51,12 +60,16 @@ class CarrinhoController extends Controller
                 ]);
                 return redirect('/carrinho/exibir');
             }
-            // $carrinho = $request->session()->get("carrinho");
-            // if(($key = array_search($id, array_column($carrinho, 'product_id'))) >=0 ){
-            //     $carrinho[$key]['qty']++;
-            //     $request->session()->put("carrinho",$carrinho);
-            //     return redirect('/carrinho/exibir');
-            // }
+
+            $carrinho = $request->session()->get("carrinho");
+            //>=0 || ==true
+            if(($key = array_search($id, array_column($carrinho, 'product_id')))!== false){
+
+                $carrinho[$key]['qty']++;
+                $request->session()->put("carrinho",$carrinho);
+                return redirect('/carrinho/exibir');
+            }
+
            $carrinho = $request->session()->get("carrinho");
            $carrinho[]= [
                "product_id" => $id,
@@ -64,20 +77,21 @@ class CarrinhoController extends Controller
            ];
 
            $request->session()->put("carrinho",$carrinho);
-
-
            return redirect('/carrinho/exibir');
-
     }
 
     public function remover(Request $request,$id){
 
         $carrinho = $request->session()->get("carrinho");
-        //procurando o id dentro da array carrinho
 
+        if($carrinho == null || count($carrinho) == 0){
+            return redirect('/carrinho/exibir');
+        }
+
+        //procurando o id dentro da array carrinho
         $key = array_search($id, array_column($carrinho, 'product_id'));
 
-        unset($carrinho[$key]);
+       unset($carrinho[$key]);
 
 
         $request->session()->put("carrinho",$carrinho);
@@ -86,6 +100,69 @@ class CarrinhoController extends Controller
         return redirect('/carrinho/exibir');
 
     }
-}
+
+    public function finalizarCompra(Request $request){
 
 
+        if($request->session()->has('carrinho')){
+
+            $carrinho = $request->session()->get('carrinho');
+
+            $user = Auth::user();
+
+            $novaCompra = new Compra();
+            $novaCompra->fk_idCliente = $user->id;
+            $novaCompra->save();
+
+            foreach($carrinho as $produto){
+            $novoItemCompra = new Item();
+            $novoItemCompra->idProduto = $produto;
+            $novoItemCompra->idItem = $novaCompra->id;
+            $novoItemCompra->save();
+            }
+
+            $request->session ()->flush();
+            return redirect('principal');
+
+           } else {
+
+                $carrinho = [];
+                $request->session()->put('carrinho', $carrinho);
+                return redirect('/carrinho');
+
+           }
+        }
+    }
+
+
+
+
+
+// public function add(Request $res, $idProduct){
+//     //pergunta se existe uma sessão ativa
+
+//    if($res->session()->has('cart')){
+//        $cart = $res->session()->get('cart');
+
+//       //pegar as info do usuario
+//        $user = Auth::user();
+//        //criar uma nova compra
+//        $newOrder = new Orders();
+//        $newOrder->user_id = $user->id;
+//        $newOrder->save();
+
+//        foreach ($cart as $product) {
+//            $newItemOrder = new ItemOrder();
+//            $newItemOrder->product_id = $product;
+//            $newItemOrder->orders_id = $newOrder->id;
+//            $newItemOrder->save();
+//        }
+//        $res->session ()->flush();
+//        return redirect('home');
+
+//    }else {
+//        $cart = [$idProduct];
+//        $res->session()->put('cart', $cart);
+//        return redirect('/cart');
+//    }
+// }

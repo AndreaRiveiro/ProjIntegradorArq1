@@ -1,4 +1,4 @@
-<button id="btnLogin" onclick="document.getElementById('id01').style.display='block'" class=" btn btnEditarAdmin btn btn-outline-info" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
+{{-- <button id="btnLogin" onclick="document.getElementById('id01').style.display='block'" class=" btn btnEditarAdmin btn btn-outline-info" style="font-size:0.6em;"><i class="fa fa-user-plus" style="font-size:1em;color:#000505"></i>Login</button>
     <div class="card-header" hidden>{{ __('Login') }}</div>
     <div id="id01" class="modal">
         <form class="modal-content animate" method="POST" action="{{ route('login') }}">
@@ -16,7 +16,7 @@
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-          
+
           <div class="linhaSenha">
             <label for="password"><b>{{ __('Password') }}</b></label><a href="#">Esqueceu?</a>
             <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Digite sua Senha" name="password" required autocomplete="current-password">
@@ -43,29 +43,33 @@
                 </a>
             @endif
         </div>
-      </form> 
+      </form>
     </div>
      <!--Footer modal Login Fim -->
-  
+
     <script>
     // Get the modal
     var modal = document.getElementById('id01');
-  
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
-    
+
     function myFuncCadastro() {
       location.href = {{ __("cadastro") }};
     }
     </script>
-    
-    
-<!-- <div class="container">
-    <div class="row justify-content-center">
+     --}}
+@extends('template')
+
+@section('container')
+
+
+<div class="container">
+    <div class="row justify-content-center m-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -106,7 +110,7 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
                                 @if (Route::has('password.request'))
@@ -121,4 +125,5 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
+@endsection
