@@ -1,5 +1,5 @@
   /* form contato begin */
-/* 
+/*
 .contato-content {
     margin: 8%;
     width: 40%;
@@ -25,9 +25,7 @@
      padding: 10%;
 
 }
-.botao{
-    margin-top: 2px;
-}
+
 
 h1#contatonome{
     margin-top: 90px;
@@ -45,6 +43,14 @@ h1#contatonome{
     margin-top: 2%;
 } */
 
+textarea.form-control.conts{
+    margin-bottom: 2%;
+}
+
+textarea.form-control.parceiro{
+    margin-bottom: 2%;
+}
+
 /* form contato end */
 
 /* imagem logo */
@@ -53,6 +59,13 @@ h1#contatonome{
     height: 40%;
 }
 
+#coloracao{
+    background-color: grey;
+}
 
+
+div.espaco{
+    margin: 2%;
+}
 
 

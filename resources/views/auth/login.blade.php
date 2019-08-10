@@ -1,8 +1,11 @@
 
-    
-    
-<!-- <div class="container">
-    <div class="row justify-content-center">
+@extends('template')
+
+@section('container')
+
+
+<div class="container">
+    <div class="row justify-content-center m-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -43,7 +46,7 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     {{ __('Login') }}
                                 </button>
                                 @if (Route::has('password.request'))
@@ -58,4 +61,5 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
+@endsection

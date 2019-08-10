@@ -88,7 +88,7 @@
             </div>
 
             <div class="btn12">
-                <button id="bt_submit" type="submit" name='cadastro' class="btn btn-primary btn-casds">Enviar</button>
+                <button id="bt_submit" type="submit" name='cadastro' class="btn btn-success btn-casds">Enviar</button>
                 <input type="reset" value="Limpar" class="btn">
             </div>
         </div>

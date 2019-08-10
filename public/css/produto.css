@@ -29,20 +29,21 @@
 
 .img1{
     margin: 17px;
-    
+
 }
 .img2{
     margin: 15px;
 }
 .img3{
     padding: 30px;
+
 }
 
 /* info */
 
 .name-info{
     margin: 0px;
-   
+
 }
 .quant{
     margin: 10px;
@@ -53,8 +54,8 @@
     color: white;
     border-color: transparent;
     background-color: #17a2b8;
-    
-    
+
+
 }
 .card-text{
     text-align: center;
@@ -66,21 +67,21 @@
 }
 
 .arm{
-    margin-top:20px; 
+    margin-top:20px;
 }
 
 .btn12{
     margin-top: 10px;
-    
+
 }
 
 .zoom:hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
- 
+
  .zoem:hover{
      transform: scale(1.4);
- } 
+ }
 
 
 
@@ -95,7 +96,7 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
-  
+
   /* Modal Content (Image) */
   .modal-content {
     margin: auto;
@@ -103,7 +104,7 @@
     width: 80%;
     max-width: 700px;
   }
-  
+
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
   #caption {
     margin: auto;
@@ -115,18 +116,18 @@
     padding: 10px 0;
     height: 150px;
   }
-  
+
   /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption { 
+  .modal-content, #caption {
     animation-name: zoom;
     animation-duration: 0.6s;
   }
-  
+
   @keyframes zoom {
-    from {transform:scale(0)} 
+    from {transform:scale(0)}
     to {transform:scale(1)}
   }
-  
+
   /* The Close Button */
   .close {
     position: absolute;
@@ -137,14 +138,14 @@
     font-weight: bold;
     transition: 0.3s;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
@@ -165,7 +166,7 @@
     max-width: 100px;
 }
 .princi img{
-    max-width: 300px;
+    max-width: 450px;
 }
 
 /* img produtos end */

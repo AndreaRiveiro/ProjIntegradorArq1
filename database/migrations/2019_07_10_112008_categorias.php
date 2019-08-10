@@ -17,6 +17,7 @@ class Categorias extends Migration
             $table->bigIncrements('idCategoria');
             $table->string("tipo_categoria");
             $table->string("descricao");
+            $table->string("imagensCategoria");
             $table->timestamps();
         });
     }

@@ -14,4 +14,6 @@ class PrincipalController extends Controller
         $produtos = Produto::all()->take(3);
         return view('principal',["categorias"=>$categorias,"produtos"=>$produtos]);
     }
+
+
 }
