@@ -12,7 +12,11 @@
         <img src="{{url("$busca->imagens")}}" class="card-img-top" alt="...">
         <div class="card-body card-busca">
             <h5 class="card-title">{{$busca->nome_produto}}</h5>
-            <button type="submit" class="btn btn-success busca-pag"><a href="/carrinho/adicionar/{{$busca->idProduto}}">Adicionar ao Carinho</a></button>
+            <div class="row busca-filtro-bt">
+                <button class="btn btn-suces prod-categoria m-1"><a
+                href="/produto/{{$busca->idProduto}}">+Detalhes</a></button>
+                <button type="submit" class="btn btn-success busca-pag m-1"><a href="/carrinho/adicionar/{{$busca->idProduto}}">Adicionar ao Carinho</a></button>
+            </div>
         </div>
     </div>
 @empty

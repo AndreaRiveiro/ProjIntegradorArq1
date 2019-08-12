@@ -81,7 +81,7 @@
                     <p class="card-text">{{$filtro->nome_produto}}</p>
                 </div>
                 <button type="button" class="btn btn-sucess categoria-card2 mt-0 mb-5"><a
-                    href="/produto/{{$produto->idProduto}}">Ver mais</a>
+                    href="/produto/{{$filtro->idProduto}}">Ver mais</a>
                </button>
                 </div>
             @endforeach
