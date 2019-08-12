@@ -175,6 +175,15 @@ body {
 
 }
 
+#menuBase li a:hover{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
 #menuCategoria{
     color: #fff;
 }
@@ -224,7 +233,7 @@ body {
     align-items: center;
 }
 
-li a:hover{
+#ulResponsiva li a:hover{
     text-decoration: none;
     color: black;
     display: flex;
