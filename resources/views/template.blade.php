@@ -45,13 +45,13 @@
                     <form id="formBusca"action="/busca" method="POSt" role="search" >
                         @csrf
                         <input class="buscar" type="search" name="search" size="24" placeholder="  O que você está procurando">
-                        <button type="submit" class="btn btn-default">
+                        <button type="submit" class="btn btn-default"style="background:none">
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
                 </div>
 
-                <div class="row justify-content-between">
+                <div class="row justify-content-between align-items-center">
                     @guest
                         <div id="divRightLineTwo" class="col-lg-3">
                                 {{-- @include('auth.login') --}}
