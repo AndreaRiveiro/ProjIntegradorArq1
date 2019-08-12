@@ -9,8 +9,8 @@
                 <ul class="nav justify-content-center">
                     @foreach ($categorias as $categoria)
 
-                    <li class="nav-item lista-categorias"><a
-                            href="/categoria/{{$categoria->idCategoria}}">{{$categoria->tipo_categoria}}</a></li>
+                    <li class="nav-item lista-categorias">
+                        <a  class="ctgw" href="/categoria/{{$categoria->idCategoria}}">{{$categoria->tipo_categoria}}</a></li>
                     @endforeach
                     <li class="nav-item lista-categorias"><a id="lista-ultimo" href="/categoria">Todos os produtos</a>
                     </li>
