@@ -11,6 +11,11 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
+
+    public function index()
+    {
+        return view('cadastroAdmin');
+    }
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -134,6 +139,6 @@ class RegisterController extends Controller
          $novoCliente->nivel_user = 1;
          $novoCliente->cliente_status = 1;
          $novoCliente->save();
-         return $redirectTo;
+         return $redirect("/principal");
      }
 }

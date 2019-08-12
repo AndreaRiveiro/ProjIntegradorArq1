@@ -17,133 +17,132 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/sobre.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/produto.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/pageProdutos.css')}}">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/app.css')}}" >
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/app.css')}}">
     {{-- <link rel="stylesheet" type="text/css" media="screen" href="{{asset('css/styleTeste.css')}}" > --}}
     <title>MeSustenta</title>
 </head>
+
 <body>
-<header>
+    <header>
         <section id="containerNav" class="nav d-flex col-lg-12 col-md-12 col-sm-12">
-            <nav id="navTopo" class="row">
-                <div class="col-3">
+            <nav id="menuTopoResponsivo" class="col-md-12 col-sm-12">
+                <div id="logoResponsivo">
                     <a href="/principal"><img src="/img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
                 </div>
-                <div id="containerSearch" class="container-fluid justify-content-around col-5">
-                    <form action="/busca" method="POSt" role="search" >
+                <div id="buscaResponsivo"class="col-md-12 col-sm-12">
+                    <form action="/busca" method="POSt" role="search" class="col-md-12 col-sm-12">
+                        @csrf
+                        <input class="buscar col-md-8 col-sm-8" type="search" name="search" size="30" placeholder="  O que você está procurando">
+                    </form>
+                </div>
+            </nav>
+            <nav id="navTopo" class="d-flex justify-content-around align-items-center col-lg-12">
+                <div class="col-lg-3">
+                    <a href="/principal"><img src="/img/logoMeSustenta.png" alt="Logo MeSustenta"></a>
+                </div>
+
+                <div id="#containerSearch" class="col-lg-3 col-md-12 col-sm-12">
+                    <form id="formBusca"action="/busca" method="POSt" role="search" >
                         @csrf
                         <input class="buscar" type="search" name="search" size="24" placeholder="  O que você está procurando">
                         <button type="submit" class="btn btn-default">
                             <i class="fa fa-search"></i>
-                                    {{-- <span class="glyphicon glyphicon-search"></span> --}}
-
                         </button>
                     </form>
                 </div>
-                <div class="row d-flex justify-content-center col-3">
+
+                <div class="row justify-content-between">
                     @guest
-                        <div id="divRightLineTwo" class="col-3">
+                        <div id="divRightLineTwo" class="col-lg-3">
                                 {{-- @include('auth.login') --}}
-                                <div id="login" class="d-flex align-items-center col-4">
-                                        <a id="addLogin" href="/login" style="font-size:0.6em;color:#000505">
-                                            <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
+                                <div id="login" class="col-lg-3">
+                                        <a href="/login" style="font-size:0.8em;color:#000505">
                                             Login
                                         </a>
                                     </div>
                         </div>
-                        <div id="cadastrar" class="d-flex align-items-center col-4">
-                            <a id="addLogin" href="/cadastro" style="font-size:0.6em;color:#000505">
-                                <i class="fa fa-thumbs-up" style="font-size:1.2em;color:#000505"></i>
-                                Cadastre-se
-                            </a>
+                        <div class="d-flex align-items-center col-lg-3">
+                            <a id="fafaCar" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho"></a>
                         </div>
-                    @endguest
-
-                    @auth
-                    <div id="containerLogado">
-                        <p id="primNome">
-                            <a class="btn btn-primary btn-outline-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                               Olá, {{ Auth::user()->prim_nome}}
-                            </a>
-                            <div class="collapse" id="collapseExample">
+                    </div>    
+                    <div id="cadastrar">
+                        <a id="addLogin" href="/cadastro" style="font-size:0.8em;color:#000505">
+                            Cadastre-se
+                        </a>
+                    </div>           
+                    @endguest                 
+                @auth
+                <div id="containerLogado" class="d-flex align-items-center justify-content-around">
+                    <div id="primNome">
+                        <a id="nomeUser" data-toggle="collapse" href="#menu-edit-admin" role="button" aria-expanded="false" aria-controls="menu-edit-admin">
+                            Olá, {{ Auth::user()->prim_nome}}
+                        </a>
+                        <div class="collapse" id="menu-edit-admin">
                             <div id=menuDeslogar class="card card-body">
                                 <p id="editarCad">
                                     <a href="/editarCadastro/{{Auth::user()->id}}">
-                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                            <i class="fa fa-pencil-square-o" style="font-size:1.2em;color:#000505"></i>Editar Cadastro
+                                        <button id="btnEditarCd" type="button" class="btn btn-outline-info"style="font-size:0.8em;color:#000505">
+                                            Editar Cadastro
                                         </button>
                                     </a>
                                 </p>
-                                <a href="/logout" ><button id="buttonLogout" type="button" class="btn btn-outline-info col-12" style="font-size:0.6em;color:#000505">
-                                    <i class="fa fa-user-times" style="font-size:1.2em;color:#000505"></i>Logout!</button>
+                                <a href="/logout">
+                                    <button id="buttonLogout" type="button"
+                                        class="btn btn-outline-info col-12" style="font-size:0.8em;color:#000505">
+                                        Logout!
+                                    </button>
                                 </a>
                             </div>
                         </div>
-                        </p>
-                        @if(Auth::user()->nivel_user ==0)
-                        <a id="btnEditarAdmin" href="/index">
-                            <button id="btnEditarAdmin" type="button" class="btn btn-outline-info col-12" style="font-size:0.8em;color:#000505">
-                                Admin
-                            </button>
-                        </a>
-                        @endif
-                    </div>
-                    @endauth
-
-                    <div class="d-flex align-items-center w-25">
-                        <a id="fafaCar" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho" class="w-125"></a>
+                    </div>  
+                    <div class="d-flex align-items-center">
+                        <a id="fafaCarLogado" href="/carrinho/exibir"><img src="/img/cart.png" alt="imagem carrinho"></a>
                     </div>
                 </div>
+                </div>
+                @if(Auth::user()->nivel_user ==0)
+                    <a id="aEditarAdmin" href="/index">
+                        <button id="btnEditarAdmin" type="button" class="btn btn-outline-info" style="font-size:0.8em;color:#000505">
+                            Admin
+                        </button>
+                    </a>
+                @endif 
+                @endauth       
             </nav>
+            <!-- Menu Haburguer Início-->
+                <input type="checkbox" id="menuResponsivo" name="menuResponsivo">
+                <label for="menuResponsivo">
+                    <img id="hamburguer" src="/img/menu.png" alt="menu hamburguer">
+                </label>
+                <nav id="navResponsivo">
+                    <div id="containerHamburguer">
+                        <ul id="ulResponsiva">
+                            <li><a class="itemMenu" href="/principal">Home</a></li>
+                            <li><a class="itemMenu" href="/categoria">Categorias</a>
+                                <ul class="subItemMenu">
+                                    <a class="dropdown-item subTitulo" href="/categoria/1">Alimentos</a>
+                                    <a class="dropdown-item subTitulo" href="/categoria/2">Beleza</a>
+                                    <a class="dropdown-item subTitulo" href="/categoria/3">Casa</a>
+                                </ul>
+                            </li>
+                            <li><a class="itemMenu" href="/sobre">Sobre</a></li>
+                            <li><a class="itemMenu" href='/contato'>Contato</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+                <!-- Menu Hamburguer Fim-->
             <nav id="navBase" class="container-fluid">
-                <!-- Menu Hamburguer Início-->
-                <div id="toggle" href="#">
-                    <span></span>
-                </div>
-                <div id="menuResponsivo">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li class="itemMenu"><a href="#">Lojas</a>
-                            <ul class="subItemMenu">
-                                <li><a href="#">BIOZ</a></li>
-                                <li><a href="#">RAIZS</a></li>
-                                <li><a href="#">VIVA AMAZON</a></li>
-                            </ul>
-                        </li>
-                        <li class="itemMenu"><a href="#">Departamentos</a>
-                            <ul class="subItemMenu">
-                                <li><a href="pageDepartamentos.html">Alimentos</a>
-                                <li><a href="#">Beleza</a></li>
-                                <li><a href="#">Casa</a></li>
-                                <li><a href="#">Moda</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-                    <!-- Menu Hamburguer Fim-->
                 <div id="menuBase" class="container-fluid">
-                    <!--  Comeco menu de Produtor-->
-                    {{-- <li id="listaLojas" class="navbar-item dropdown">
-
-                        <a class="nav-link dropdown-toggle botao-busca tituloMenu" data-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="true" aria-expanded="false">Lojas</a>
-                        <div class="dropdown-menu subMenu">
-                            <a class="dropdown-item subTitulo" href="#">BIOZ</a>
-                            <a class="dropdown-item subTitulo" href="AlimentosPage.html">RAIZS</a>
-                            <a class="dropdown-item subTitulo" href="#">VIVA AMAZON</a>
-                        </div>
-                    </li> --}}
-                    <!--    Final menu de Produtor-->
-                    <!--   Comeco menu de Departamentos -->
+                     <!--   Comeco menu de Departamentos -->
                     <li id="listaDepartamentos" class="navbar-item dropdown">
-                        <a class="nav-link dropdown-toggle botao-busca tituloMenu" data-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
-                        <div class="dropdown-menu subMenu">
+                        <a id="menuCategoria" class="nav-link dropdown-toggle botao-busca tituloMenu"
+                            data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">Categorias</a>
+                        <div id="subMenu" class="dropdown-menu subMenu">
                             <a class="dropdown-item subTitulo" href="/categoria/1">Alimentos</a>
                             <a class="dropdown-item subTitulo" href="/categoria/2">Beleza</a>
                             <a class="dropdown-item subTitulo" href="/categoria/3">Casa</a>
-
                         </div>
                     </li>
                     <!--   Final menu de Departamentos -->
@@ -166,7 +165,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                        <img src="/img/banner-principal-mesustenta.jpeg" class="d-block w-100" alt="...">
+                        <img src="/img/banner-principal-mesustenta1.jpeg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h3></h3>
                             <p></p>
@@ -205,11 +204,11 @@
         </div>
     </div>
     <main class="container">
-         @yield('container')
+        @yield('container')
 
     </main>
- <!--FOOTER InÍCIO-->
- <footer class="page-footer font-small blue pt-4 ftr">
+    <!--FOOTER InÍCIO-->
+    <footer class="page-footer font-small blue pt-4 ftr">
 
 <section >
     <div class="container-fluid text-center text-md-left">
@@ -233,9 +232,8 @@
                 <li>
                 <a class="ftr-nomes" href="/contato">Contato</a>
                 </li>
-
-            </ul>
-        </div>
+                        </ul>
+                    </div>
 
         <div class="col-md-3 mb-md-0 mb-3 col-lg-3  ">
             <h5 class="text-uppercase nomes text-center">Links</h5>
@@ -256,16 +254,12 @@
         </div>
     </div>
     </div>
+        </section>
 
-</section>
+        <!-- Copyright -->
 
-
-
-<!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
+    </footer>
+    <!-- Footer -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
