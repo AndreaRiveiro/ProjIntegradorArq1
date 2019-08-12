@@ -2,14 +2,14 @@
 
 @section('container')
 
-<h1>Cadastro de Produto no Catálogo</h1>
+<h1 >Cadastro de Produto no Catálogo</h1>
 
 <form action="/cadastroProduto" method="post" enctype="multipart/form-data">
 @csrf
 
 <section class="container">
 
-<div class="card cadastro-conteudo col-md-8">
+<div class="card cadastro-conteudo col-md-8 m-5">
         <div class="form-group" >
 
             <div>
