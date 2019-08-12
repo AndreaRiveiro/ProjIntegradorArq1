@@ -216,18 +216,18 @@ class CadastrarProdutosSeeder extends Seeder
 
 
         $produto = new Produto();
-        $produto->nome_produto = "Sabão Multiuso";
+        $produto->nome_produto = "Kit Limpeza";
         $produto->tipo_produto = "Limpeza";
         $produto->codigo_do_produto = "302";
         $produto->codigo_categoria = "3";
         $produto->quantidade_em_estoque = "10";
         $produto->estoque_maximo = "20";
-        $produto->descricao_prod = "Sabão em líquido multiuso feito de forma natural com produto orgânicos sem aditivos quimicos.";
+        $produto->descricao_prod = "Kit composto por produtos de limpeza e banho feito de forma natural com produto orgânicos sem aditivos quimicos.";
         $produto->codigo_fornecedor = "04";
         $produto->nome_loja = "Honest Company";
         $produto->preco_venda = "30";
         $produto->produto_status = "Em estoque";
-        $produto->imagens = "/img/honestsabao.jpg";
+        $produto->imagens = "/img/honestComp.jpg";
         $produto->save();
 
         $produto = new Produto();
