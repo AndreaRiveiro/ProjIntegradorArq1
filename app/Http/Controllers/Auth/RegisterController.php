@@ -11,6 +11,11 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
+
+    public function index()
+    {
+        return view('cadastroAdmin');
+    }
     /*
     |--------------------------------------------------------------------------
     | Register Controller

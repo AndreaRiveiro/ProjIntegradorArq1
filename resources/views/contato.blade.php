@@ -3,9 +3,9 @@
 @section('container')
 
  <!-- formulario para contato  -->
- <div class="container px-lg-5">
+ <div class="container px-lg-5 col-md-12 col-sm-12">
     <div class="row mx-lg-n5" id="forms">
-        <div class="col py-3 px-lg-5 border bg-light col-5" id="coloracao">
+        <div class="col py-3 px-lg-5 border bg-light col-lg-5 col-md-12 col-sm-12" id="coloracao">
                 <div class="contato-content">
                         <h1 id="formul-contato" href="/contato">Fale Conosco</h1>
                 </div>
@@ -41,11 +41,11 @@
 
         </div>
 
-        <div class="col py-3 px-lg-5 border bg-light col-5" id="coloracao">
+        <div class="col py-3 px-lg-5 border bg-light col-lg-5 col-md-12 col-sm-12" id="coloracao">
                 <div class="contato-content">
                             <h1 id="formul-parceiro" href="/contato">Seja Um Parceiro</h1>
                         </div>
-                        <form id="form-parceiro" method="get" action="/contato">
+                        <form  class="col-md-12 col-sm-12" id="form-parceiro" method="get" action="/contato">
                             <div class="form-row">
                                     <label>Nome Completo*</label>
                                     <input type="text" name="nomecompletopc" class="form-control parceiro">

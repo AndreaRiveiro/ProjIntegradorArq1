@@ -3,7 +3,7 @@
 @section('container')
 
 <section class="container-fluid sobre">
-        <div class="row col-12 sobre-controle sobre-conteudo">
+        <div class="row col-lg-12 col-md-12 col-sm-12 sobre-controle sobre-conteudo">
                  <h2 class="titulo">Nossa História!</h2>
                  <div class="texto">
                     <p class="font">O site nasceu do desejo de 2 desenvolvedoras que tinham como intuito facilitar o acesso a produtos e marcas

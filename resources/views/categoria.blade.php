@@ -4,7 +4,7 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 nomescteg mb-5">
+            <div class="col-lg-12 col-sm-1 nomescteg mb-5">
                 <h2 class="text-center m-5">Categorias</h2>
                 <ul class="nav justify-content-center">
                     @foreach ($categorias as $categoria)

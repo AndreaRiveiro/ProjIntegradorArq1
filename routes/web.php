@@ -20,6 +20,9 @@ Route::get('/index',function(){
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/cadastroAdmin','Auth\RegisterController@index');
+Route::post('/cadastroAdmin', 'Auth\RegisterController@createAdmin');
+
 // Rotas Admin - Fim
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -34,9 +37,6 @@ Route::get('/teste', function() {
 
 Route::get('/principal/{login?}',"PrincipalController@index")->name('principal');
 Route::get('/',"PrincipalController@index");
-
-
-// Route::get('/home',"PrincipalController@index");
 
 Route::get('/cadastro','CadastroController@index');
 Route::post('/cadastro', 'Auth\RegisterController@create');
