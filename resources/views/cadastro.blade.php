@@ -9,7 +9,7 @@
         <h1>Cadastro</h1>
     </div>
 
-    <form id="form-cadastro" method="POST" action="/cadastro">
+    <form id="form-cadastro" method="POST" action="/register">
     @csrf
         <!-- Informações de Pessoais de Cadastro -->
         <div class="form-group" >
