@@ -450,7 +450,7 @@ div.card.imagem{
 }
 
 .busca-filtro-bt{
-
+    justify-content: space-between;
 }
 
 .zoom:hover {
