@@ -176,7 +176,7 @@ body {
 }
 
 #menuCategoria{
-    color: black;
+    color: #fff;
 }
 
 #menuBase {
@@ -238,11 +238,11 @@ ul{
 }
 
 #containerResponsivo{
-   
+
     width: 100vw;
     height: 100vh;
     position: relative;
-   
+
 }
     #menuResponsivo{
         display: none;
@@ -268,8 +268,8 @@ ul{
         z-index: 101;
         width: 80%;
         height: 100%;
-        padding: 2%;  
-        font-size: 1.4em;      
+        padding: 2%;
+        font-size: 1.4em;
     }
 
     #ulResponsiva li:hover{
@@ -298,7 +298,7 @@ ul{
         display: none;
     }
 
-  
+
     /*Menu Responsivo Fim*/
 
 /* Fim Header*/
@@ -791,7 +791,7 @@ div.card.produtos-categoria{
     #navTopo a{
         display: none;
     }
- 
+
     #menuTopoResponsivo{
         padding-top:2%;
         display: flex;

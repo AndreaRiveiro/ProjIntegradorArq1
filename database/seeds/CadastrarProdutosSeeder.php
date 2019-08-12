@@ -222,7 +222,7 @@ class CadastrarProdutosSeeder extends Seeder
         $produto->codigo_categoria = "3";
         $produto->quantidade_em_estoque = "10";
         $produto->estoque_maximo = "20";
-        $produto->descricao_prod = "Sabão em líquido multiuso feito de forma natural com produto orgânicos sem aditivos quimicos.";
+        $produto->descricao_prod = "Kit composto por produtos de limpeza e banho feito de forma natural com produto orgânicos sem aditivos quimicos.";
         $produto->codigo_fornecedor = "04";
         $produto->nome_loja = "Honest Company";
         $produto->preco_venda = "30";
