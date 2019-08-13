@@ -9,4 +9,5 @@ class Compra extends Model
     protected $table = "compras";
     protected $primaryKey = "idCompra";
     public $timestamps = false;
+    public $fillable = ['idCompra'];
 }

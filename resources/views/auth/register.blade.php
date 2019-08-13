@@ -21,17 +21,17 @@
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror         
+                @enderror
             </div>
             <div>
                 <label>Sobrenome</label>
                 <input type="text" class="form-control casds" name="lastName" placeholder="Sobrenome">
-            </div>         
+            </div>
 
         </div>
-    </form>    
+    </form>
 
-
+{{--
     <form method="POST"action="/cadastro">
         <!-- Informações Endereço -->
         <div class="form-group">
@@ -68,7 +68,7 @@
 
         </div>
 
-    </form>    
+    </form>     --}}
 
     <form method="POST"  action="/cadastro">
         <!-- Informações de Login -->

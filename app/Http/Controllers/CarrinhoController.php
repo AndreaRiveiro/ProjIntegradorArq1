@@ -103,7 +103,6 @@ class CarrinhoController extends Controller
 
     public function finalizarCompra(Request $request){
 
-
         if($request->session()->has('carrinho')){
 
             $carrinho = $request->session()->get('carrinho');
@@ -115,10 +114,12 @@ class CarrinhoController extends Controller
             $novaCompra->save();
 
             foreach($carrinho as $produto){
-            $novoItemCompra = new Item();
-            $novoItemCompra->idProduto = $produto;
-            $novoItemCompra->idItem = $novaCompra->id;
-            $novoItemCompra->save();
+                $novoItemCompra = new Item();
+                $novoItemCompra->nome_item = 'bug';
+                $novoItemCompra->valor_unitario = 10;
+                $novoItemCompra->numero_item = $produto["qty"];
+                $novoItemCompra->fk_idCompra = $novaCompra->idCompra;
+                $novoItemCompra->save();
             }
 
             $request->session ()->flush();

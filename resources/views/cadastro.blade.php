@@ -29,7 +29,7 @@
             </div>
 
         </div>
-        <!-- Informações Endereço -->
+        {{-- <!-- Informações Endereço -->
         <div class="form-group">
             <div>
                 <label for="endereco">Endereço</label>
@@ -61,7 +61,7 @@
                 <input type="number" class="form-control casds" name='cep' >
             </div>
 
-        </div>
+        </div> --}}
         <!-- Informações de Login -->
 
         <div class="form-group" >

@@ -47,7 +47,7 @@
                             <td class="text-right">{{$produto['preco_venda']}}</td>
                              <td class="text-right"><a  href="/carrinho/remover/{{$produto['product_id']}}"class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> </td>
                             @empty
-                            <h2>Carrinho vazio</h2>
+                            {{-- <h2>Carrinho vazio</h2> --}}
                         </tr>
                               @endforelse
 
